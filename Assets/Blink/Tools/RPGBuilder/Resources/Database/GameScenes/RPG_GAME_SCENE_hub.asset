@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd833f50e74631042ae5eac5ab830020, type: 3}
+  m_Name: RPG_GAME_SCENE_hub
+  m_EditorClassIdentifier: 
+  ID: 3
+  _name: hub
+  _fileName: RPG_GAME_SCENE_hub
+  displayName: hub
+  description: 
+  loadingBG: {fileID: 0}
+  minimapImage: {fileID: 0}
+  mapBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  mapSize: {x: 1024, y: 1024}
+  startPositionID: 3
+  startPositionREF: {fileID: 11400000, guid: 7dbc1bd6d97edee48a21db86b5d94879, type: 2}
+  isProceduralScene: 0
+  SpawnPointName: 
+  regions: []

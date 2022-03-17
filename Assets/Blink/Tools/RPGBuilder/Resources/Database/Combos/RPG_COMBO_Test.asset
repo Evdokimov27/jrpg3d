@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05bc7598359d3440a24c4ecd252be33, type: 3}
+  m_Name: RPG_COMBO_Test
+  m_EditorClassIdentifier: 
+  ID: 2
+  _name: Test
+  displayName: Test
+  fileName: RPG_COMBO_Test
+  description: 
+  initialAbilityID: 6
+  StartCancelOtherCombos: 0
+  combos:
+  - abilityID: 23
+    abMustBeKnown: 1
+    mustHit: 0
+    expireTime: 3
+    readyTime: 0
+    keyType: 0
+    overrideKey: 273
+    actionKeyName: 
+    requirements: []
