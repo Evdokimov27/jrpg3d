@@ -16,6 +16,6 @@ MonoBehaviour:
   _name: hub
   _fileName: RPG_WORLD_POSITION_hub
   displayName: hub
-  position: {x: 25.386, y: 4.8199844, z: 15.676}
+  position: {x: 35.62, y: 3.64, z: -37.04}
   useRotation: 1
-  rotation: {x: -0, y: 0, z: 0}
+  rotation: {x: -0, y: 180, z: 0}
