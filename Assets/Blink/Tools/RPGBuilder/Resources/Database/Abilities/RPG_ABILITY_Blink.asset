@@ -16,8 +16,9 @@ MonoBehaviour:
   _name: Blink
   _fileName: RPG_ABILITY_Blink
   displayName: Blink
+  Tag: 
   icon: {fileID: 21300000, guid: b301210749aa3554bb1dd849875ec3ce, type: 3}
-  learnedByDefault: 0
+  learnedByDefault: 1
   abilityType: 0
   ranks:
   - ShowedInEditor: 1

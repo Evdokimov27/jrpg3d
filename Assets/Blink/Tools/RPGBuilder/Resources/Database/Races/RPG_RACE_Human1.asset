@@ -17,9 +17,9 @@ MonoBehaviour:
   _fileName: RPG_RACE_Human1
   displayName: "\u0427\u0435\u043B\u0438\u043A1"
   description: 
-  startingSceneID: 2
+  startingSceneID: 0
   startingSceneREF: {fileID: 0}
-  startingPositionID: 2
+  startingPositionID: 0
   startingPositionREF: {fileID: 0}
   factionREF: {fileID: 11400000, guid: 3373acf609049604096ebefd29b9dd77, type: 2}
   factionID: 0

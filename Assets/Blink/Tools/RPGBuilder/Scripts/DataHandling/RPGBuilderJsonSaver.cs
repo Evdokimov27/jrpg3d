@@ -102,7 +102,7 @@ public static class RPGBuilderJsonSaver
             if (!LoadingScreenManager.Instance.isSceneLoading && !CombatManager.playerCombatNode.dead)
             {
                 charCombatData.position = CombatManager.playerCombatNode.transform.position;
-                charCombatData.rotation.y = CombatManager.playerCombatNode.transform.eulerAngles.y;
+                charCombatData.rotation.y = 180;
             }
             SaveEquippedItems();
         }
