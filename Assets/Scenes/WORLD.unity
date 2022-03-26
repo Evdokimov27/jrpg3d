@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 229084784}
   - component: {fileID: 229084783}
   - component: {fileID: 229084782}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1763,6 +1763,10 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 493843457}
+    - target: {fileID: 6612956595752523640, guid: 80844b2319340044da27db99208a9eac, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80844b2319340044da27db99208a9eac, type: 3}
 --- !u!20 &493843457 stripped
@@ -1770,6 +1774,75 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6612956595752523640, guid: 80844b2319340044da27db99208a9eac, type: 3}
   m_PrefabInstance: {fileID: 493843456}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &493843458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5192515646508625321, guid: 80844b2319340044da27db99208a9eac, type: 3}
+  m_PrefabInstance: {fileID: 493843456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &493843459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493843458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d66045b37204fe4cb66c6914bb4dac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  ObstacleLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  BackgroundLayers:
+    serializedVersion: 2
+    m_Bits: 63
+  maskDownsample: 0
+  backgroundDownsample: 0
+  disabledTriggers: []
+  disabledObstacles: []
+  colorizeTriggers: 0
+  colorStrength: 0
+  coloredTriggersDefaultColor: {r: 1, g: 1, b: 1, a: 1}
+  coloredTriggers: []
+  preserveDepthTexture: 0
+  checkRenderTypes: 0
+  useTransparencyMasks: 0
+  alphaDiscard: 1
+  transparency: 1
+  sensitivity: -0.5
+  blurSpilling: 1
+  hardBlur: 1
+  HBdownsample: 0
+  HBblurSize: 15
+  HBblurIterations: 5
+  blurSmoothing: 1
+  softBlur: 1
+  SBdownsample: 5
+  SBblurSize: 15
+  SBblurIterations: 5
+  tintColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundRenderType: 0
+  noShadows: 0
+  lightsToDisable: []
+  outline: 0.001
+  hologramColorFactor: 1
+  effectColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  replacementShader: {fileID: 0}
+  shaderTags: 
+  messageBeforeRender: 0
+  messageReciever: {fileID: 0}
+  messageMethod: STS_BeforeBackRender
+  forceForwardRenderingOnBackground: 0
+  showObscuranceMask: 0
+  showColorMask: 0
+  triggersCamera: {fileID: 0}
+  obstaclesCamera: {fileID: 0}
+  backgroundCamera: {fileID: 0}
 --- !u!1 &503363720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4185,7 +4258,8 @@ GameObject:
   - component: {fileID: 1090622563}
   - component: {fileID: 1090622562}
   - component: {fileID: 1090622561}
-  m_Layer: 0
+  - component: {fileID: 1090622565}
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4268,6 +4342,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1090622565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090622560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18132d62b5071cd4d84b8e544b416868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeType: 0
+  customFade: 0
+  fadeTo: 0
+  otherObjects: []
+  checkParentObject: 0
+  faded: 0
 --- !u!1 &1131179257
 GameObject:
   m_ObjectHideFlags: 0
@@ -6824,10 +6916,10 @@ MonoBehaviour:
   Margin: {x: 0, y: 0}
   Points:
   - {x: 0.6875, y: 1}
-  - {x: 0.13930348, y: 0.49751246}
-  - {x: 0.13930348, y: 0.49751246}
-  - {x: 0.7064677, y: 0.58208954}
-  - {x: 0.7064677, y: 0.58208954}
+  - {x: 0.27860695, y: 0.40796018}
+  - {x: 0.27860695, y: 0.40796018}
+  - {x: 0.68159205, y: 0.47761196}
+  - {x: 0.68159205, y: 0.47761196}
   - {x: 0.3125, y: 0}
   relativeSize: 1
   LineList: 1

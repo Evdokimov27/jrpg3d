@@ -19,11 +19,11 @@ MonoBehaviour:
   displayName: "\u0421\u0435\u0440\u0435\u0431\u0440\u044F\u043D\u044B\u0435 \u043C\u043E\u043D\u0435\u0442\u044B"
   description: 
   minValue: 0
-  maxValue: 0
-  baseValue: 5
-  AmountToConvert: 0
-  convertToCurrencyID: -1
+  maxValue: 100
+  baseValue: 0
+  AmountToConvert: 100
+  convertToCurrencyID: 2
   convertToCurrencyREF: {fileID: 0}
-  lowestCurrencyID: 1
+  lowestCurrencyID: 0
   lowestCurrencyREF: {fileID: 0}
   aboveCurrencies: []

@@ -24,6 +24,6 @@ MonoBehaviour:
   AmountToConvert: 0
   convertToCurrencyID: -1
   convertToCurrencyREF: {fileID: 0}
-  lowestCurrencyID: 2
+  lowestCurrencyID: 1
   lowestCurrencyREF: {fileID: 0}
   aboveCurrencies: []
