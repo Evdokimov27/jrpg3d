@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada825255f0166f4c9c8124a0f1e2448, type: 3}
   m_Name: RPG_ITEM_Copper
   m_EditorClassIdentifier: 
-  ID: 67
+  ID: 68
   _name: Copper
   _fileName: RPG_ITEM_Copper
   displayName: "\u041C\u0435\u0434\u043D\u044B\u0439 \u0441\u043B\u0438\u0442\u043E\u043A"

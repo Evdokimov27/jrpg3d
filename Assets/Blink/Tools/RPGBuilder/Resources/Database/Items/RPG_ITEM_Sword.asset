@@ -21,7 +21,7 @@ MonoBehaviour:
   itemType: WEAPON
   weaponType: GREATAXE
   armorType: 
-  slotType: TWO HAND
+  slotType: ANY HAND
   rarity: Uncommon
   itemModelName: 
   weaponModel: {fileID: 186464, guid: eebbaac95f0b5ca47bbaa7a0514463c5, type: 3}
@@ -29,28 +29,28 @@ MonoBehaviour:
   armorMesh: {fileID: 0}
   armorPieceType: 0
   weaponPositionDatas:
-  - raceID: 0
-    raceREF: {fileID: 11400000, guid: be0b50cba05c54e4a9369b85809fd8b5, type: 2}
+  - raceID: 2
+    raceREF: {fileID: 11400000, guid: 15ad0157142a54340a6fac43e2a4b4c5, type: 2}
     genderPositionDatas:
     - gender: 0
-      CombatPositionInSlot: {x: -0.022, y: 0.152, z: -0}
-      CombatRotationInSlot: {x: -0.000036233934, y: 179.99995, z: 345.8234}
+      CombatPositionInSlot: {x: -0.029, y: 0.005, z: 0.01}
+      CombatRotationInSlot: {x: 280.49762, y: 112.454704, z: 67.447914}
       CombatScaleInSlot: {x: 1, y: 1, z: 1}
-      RestPositionInSlot: {x: 0.188, y: -0.054, z: 0.102}
-      RestRotationInSlot: {x: 286.14572, y: 101.563194, z: 318.57065}
+      RestPositionInSlot: {x: 0.019, y: 0.038, z: -0.106}
+      RestRotationInSlot: {x: 356.7084, y: 86.02606, z: 140.46317}
       RestScaleInSlot: {x: 1, y: 1, z: 1}
-      CombatPositionInSlot2: {x: 0, y: 0, z: 0}
-      CombatRotationInSlot2: {x: 0, y: 0, z: 0}
+      CombatPositionInSlot2: {x: -0.02669055, y: 0.010073711, z: -0.014196666}
+      CombatRotationInSlot2: {x: 3.7509637, y: 6.908164, z: 209.2676}
       CombatScaleInSlot2: {x: 1, y: 1, z: 1}
-      RestPositionInSlot2: {x: 0, y: 0, z: 0}
-      RestRotationInSlot2: {x: 0, y: 0, z: 0}
+      RestPositionInSlot2: {x: -0.039, y: 0.022, z: -0.127}
+      RestRotationInSlot2: {x: 0.000018783021, y: 100.18782, z: 130.28008}
       RestScaleInSlot2: {x: 1, y: 1, z: 1}
     - gender: 1
-      CombatPositionInSlot: {x: -0.022, y: 0.152, z: -0}
-      CombatRotationInSlot: {x: -0.000036233934, y: 179.99995, z: 345.8234}
+      CombatPositionInSlot: {x: 0, y: 0, z: 0}
+      CombatRotationInSlot: {x: 0, y: 0, z: 0}
       CombatScaleInSlot: {x: 1, y: 1, z: 1}
-      RestPositionInSlot: {x: 0.188, y: -0.054, z: 0.102}
-      RestRotationInSlot: {x: 286.14572, y: 101.563194, z: 318.57065}
+      RestPositionInSlot: {x: 0, y: 0, z: 0}
+      RestRotationInSlot: {x: 0, y: 0, z: 0}
       RestScaleInSlot: {x: 1, y: 1, z: 1}
       CombatPositionInSlot2: {x: 0, y: 0, z: 0}
       CombatRotationInSlot2: {x: 0, y: 0, z: 0}

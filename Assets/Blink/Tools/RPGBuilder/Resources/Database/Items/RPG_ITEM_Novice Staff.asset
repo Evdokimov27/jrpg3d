@@ -29,29 +29,16 @@ MonoBehaviour:
   armorMesh: {fileID: 0}
   armorPieceType: 0
   weaponPositionDatas:
-  - raceID: 0
-    raceREF: {fileID: 11400000, guid: be0b50cba05c54e4a9369b85809fd8b5, type: 2}
+  - raceID: 2
+    raceREF: {fileID: 11400000, guid: 15ad0157142a54340a6fac43e2a4b4c5, type: 2}
     genderPositionDatas:
     - gender: 0
-      CombatPositionInSlot: {x: -0.077, y: 0.371, z: 0}
-      CombatRotationInSlot: {x: -0.000036233934, y: 179.99995, z: 345.8234}
-      CombatScaleInSlot: {x: 0.85757, y: 0.85757, z: 0.85757}
-      RestPositionInSlot: {x: -0.11789, y: 0.0033497, z: -0.044938}
-      RestRotationInSlot: {x: 290.60504, y: 77.010895, z: 355.9137}
-      RestScaleInSlot: {x: 0.85757, y: 0.85757, z: 0.85757}
-      CombatPositionInSlot2: {x: 0, y: 0, z: 0}
-      CombatRotationInSlot2: {x: 0, y: 0, z: 0}
-      CombatScaleInSlot2: {x: 1, y: 1, z: 1}
-      RestPositionInSlot2: {x: 0, y: 0, z: 0}
-      RestRotationInSlot2: {x: 0, y: 0, z: 0}
-      RestScaleInSlot2: {x: 1, y: 1, z: 1}
-    - gender: 1
-      CombatPositionInSlot: {x: -0.077, y: 0.371, z: 0}
-      CombatRotationInSlot: {x: -0.000036233934, y: 179.99995, z: 345.8234}
-      CombatScaleInSlot: {x: 0.85757, y: 0.85757, z: 0.85757}
-      RestPositionInSlot: {x: -0.11789, y: 0.0033497, z: -0.044938}
-      RestRotationInSlot: {x: 290.60504, y: 77.010895, z: 355.9137}
-      RestScaleInSlot: {x: 0.85757, y: 0.85757, z: 0.85757}
+      CombatPositionInSlot: {x: 0.203, y: -0.002, z: 0.571}
+      CombatRotationInSlot: {x: 85.0936, y: 319.58896, z: 298.0596}
+      CombatScaleInSlot: {x: 1, y: 1, z: 1}
+      RestPositionInSlot: {x: 0.088, y: 0.29, z: 0.025}
+      RestRotationInSlot: {x: -0.00000074307167, y: -0.0000033332728, z: 334.8656}
+      RestScaleInSlot: {x: 1, y: 1, z: 1}
       CombatPositionInSlot2: {x: 0, y: 0, z: 0}
       CombatRotationInSlot2: {x: 0, y: 0, z: 0}
       CombatScaleInSlot2: {x: 1, y: 1, z: 1}
