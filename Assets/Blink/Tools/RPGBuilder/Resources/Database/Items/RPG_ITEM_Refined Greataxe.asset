@@ -33,24 +33,11 @@ MonoBehaviour:
     raceREF: {fileID: 11400000, guid: be0b50cba05c54e4a9369b85809fd8b5, type: 2}
     genderPositionDatas:
     - gender: 0
-      CombatPositionInSlot: {x: -0.022, y: 0.152, z: -0}
-      CombatRotationInSlot: {x: -0.000036233934, y: 179.99995, z: 345.8234}
+      CombatPositionInSlot: {x: -0.107, y: -0.154, z: -0.002}
+      CombatRotationInSlot: {x: 2.429549, y: 5.781694, z: 331.29312}
       CombatScaleInSlot: {x: 1, y: 1, z: 1}
-      RestPositionInSlot: {x: 0.188, y: -0.054, z: 0.102}
-      RestRotationInSlot: {x: 286.14572, y: 101.563194, z: 318.57065}
-      RestScaleInSlot: {x: 1, y: 1, z: 1}
-      CombatPositionInSlot2: {x: 0, y: 0, z: 0}
-      CombatRotationInSlot2: {x: 0, y: 0, z: 0}
-      CombatScaleInSlot2: {x: 1, y: 1, z: 1}
-      RestPositionInSlot2: {x: 0, y: 0, z: 0}
-      RestRotationInSlot2: {x: 0, y: 0, z: 0}
-      RestScaleInSlot2: {x: 1, y: 1, z: 1}
-    - gender: 1
-      CombatPositionInSlot: {x: -0.022, y: 0.152, z: -0}
-      CombatRotationInSlot: {x: -0.000036233934, y: 179.99995, z: 345.8234}
-      CombatScaleInSlot: {x: 1, y: 1, z: 1}
-      RestPositionInSlot: {x: 0.188, y: -0.054, z: 0.102}
-      RestRotationInSlot: {x: 286.14572, y: 101.563194, z: 318.57065}
+      RestPositionInSlot: {x: -0.071, y: -0.095, z: -0.019}
+      RestRotationInSlot: {x: 0, y: 0, z: -18.635}
       RestScaleInSlot: {x: 1, y: 1, z: 1}
       CombatPositionInSlot2: {x: 0, y: 0, z: 0}
       CombatRotationInSlot2: {x: 0, y: 0, z: 0}

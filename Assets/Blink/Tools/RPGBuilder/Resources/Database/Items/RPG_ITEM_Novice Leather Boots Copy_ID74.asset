@@ -16,14 +16,14 @@ MonoBehaviour:
   _name: Novice Leather Boots Copy_ID74
   _fileName: RPG_ITEM_Novice Leather Boots Copy_ID74
   displayName: Novice Leather Boots
-  icon: {fileID: 21300000, guid: 0f7f5f4675eada247b805e54466acd95, type: 3}
-  equipmentSlot: BOOTS
+  icon: {fileID: 21300000, guid: 72f61214afa88444885aee18b2d64752, type: 3}
+  equipmentSlot: HELMET
   itemType: ARMOR
   weaponType: 
   armorType: LEATHER
   slotType: 
   rarity: Uncommon
-  itemModelName: Leather_Boots
+  itemModelName: Helmet
   weaponModel: {fileID: 0}
   modelMaterial: {fileID: 2100000, guid: 644554a0aed30c94983917c3e51194f6, type: 2}
   armorMesh: {fileID: 4300032, guid: 79812551b3b29264e84b1b81593f6f03, type: 3}
