@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1bfff45c12d4cc4fa0c10011310c1ef, type: 3}
-  m_Name: RPG_CURRENCY_Copper Coin
+  m_Name: RPG_CURRENCY_Copper_Coin
   m_EditorClassIdentifier: 
   ID: 0
   icon: {fileID: 21300000, guid: 922e1c965baf6cb4ba52b7748ec3894d, type: 3}
-  _name: Copper Coin
-  _fileName: RPG_CURRENCY_Copper Coin
+  _name: Copper_Coin
+  _fileName: RPG_CURRENCY_Copper_Coin
   displayName: "\u041C\u0435\u0434\u043D\u044B\u0435 \u043C\u043E\u043D\u0435\u0442\u044B"
   description: 
   minValue: 0
   maxValue: 100
   baseValue: 0
   AmountToConvert: 100
-  convertToCurrencyID: 1
+  convertToCurrencyID: 2
   convertToCurrencyREF: {fileID: 0}
   lowestCurrencyID: 0
   lowestCurrencyREF: {fileID: 0}
   aboveCurrencies:
-  - currencyID: 1
-    currencyREF: {fileID: 11400000, guid: 7045362cf5efb3b4f858811a16536f7c, type: 2}
   - currencyID: 2
+    currencyREF: {fileID: 11400000, guid: 7045362cf5efb3b4f858811a16536f7c, type: 2}
+  - currencyID: 1
     currencyREF: {fileID: 11400000, guid: 362c20ee5c0e7b745a40913278d8d75d, type: 2}

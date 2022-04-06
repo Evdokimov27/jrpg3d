@@ -10,12 +10,15 @@ using BLINK.RPGBuilder.World;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
 namespace BLINK.RPGBuilder.Managers
 {
     public class InventoryManager : MonoBehaviour
     {
+        [SerializeField]public GameObject[] Hub;
         public Transform draggedItemParent;
         public GameObject draggedItemImage;
+
 
         [Serializable]
         public class INVENTORY_EQUIPPED_ITEMS
@@ -1171,7 +1174,7 @@ namespace BLINK.RPGBuilder.Managers
             return curTotalCurrencyAmount >= priceInLowestCurrency;
         }
 
-        private int getTotalCurrencyOfGroup(RPGCurrency initialCurrency)
+        public int getTotalCurrencyOfGroup(RPGCurrency initialCurrency)
         {
             var thisTotalLowestCurrency = 0;
             var lowestCurrency = RPGBuilderUtilities.GetCurrencyFromID(initialCurrency.lowestCurrencyID);
@@ -1224,7 +1227,7 @@ namespace BLINK.RPGBuilder.Managers
             return totalcount;
         }
 
-        private int getValueInLowestCurrency(RPGCurrency initialCurrency, int amount)
+        public int getValueInLowestCurrency(RPGCurrency initialCurrency, int amount)
         {
             var lowestCurrency = RPGBuilderUtilities.GetCurrencyFromID(initialCurrency.lowestCurrencyID);
             if (initialCurrency == lowestCurrency && initialCurrency.aboveCurrencies.Count == 0)
@@ -1245,7 +1248,7 @@ namespace BLINK.RPGBuilder.Managers
             return thisTotalLowestCurrency;
         }
 
-        private void ConvertCurrenciesToGroups(RPGCurrency lowestCurrency, int totalAmount)
+        public void ConvertCurrenciesToGroups(RPGCurrency lowestCurrency, int totalAmount)
         {
             setCurrencyAmount(lowestCurrency, 0);
             foreach (var t in lowestCurrency.aboveCurrencies)
@@ -1286,12 +1289,36 @@ namespace BLINK.RPGBuilder.Managers
             CharacterData.Instance.currencies[CharacterData.Instance.getCurrencyIndex(currency)].amount = amount;
         }
 
+        public void Buy(RPGCurrency currency, int cost, int station)
+        {
+            var curTotalCurrencyAmount = getTotalCurrencyOfGroup(currency);
+            var priceInLowestCurrency = getValueInLowestCurrency(currency, cost);
+            Debug.Log(curTotalCurrencyAmount);
+            Debug.Log(priceInLowestCurrency);
+            Debug.Log(station);
+            if (curTotalCurrencyAmount >= priceInLowestCurrency)
+            {
+                Debug.Log("Купил " + station + " станцию");
+                curTotalCurrencyAmount -= priceInLowestCurrency;
+                ConvertCurrenciesToGroups(RPGBuilderUtilities.GetCurrencyFromID(currency.lowestCurrencyID), curTotalCurrencyAmount);
+                Hub = GameObject.FindGameObjectsWithTag("Hub");
+                Hub[0].GetComponent<UpgradeHub>().Buying(station);
+            }
+            else
+            {
+                Debug.Log("Нет денег");
+                return;
+            }
+
+
+        }
         private void TryBuyItemFromMerchant(RPGItem item, RPGCurrency currency, int cost)
         {
             var curTotalCurrencyAmount = getTotalCurrencyOfGroup(currency);
             var priceInLowestCurrency = getValueInLowestCurrency(currency, cost);
             if (curTotalCurrencyAmount >= priceInLowestCurrency)
             {
+
                 // enough to buy
                 int itemsLeftOver = RPGBuilderUtilities.HandleItemLooting(item.ID, 1, false, false);
                 if (itemsLeftOver == 0)
@@ -1371,6 +1398,10 @@ namespace BLINK.RPGBuilder.Managers
         public void BuyItemFromMerchant(RPGItem item, RPGCurrency currency, int amount)
         {
             TryBuyItemFromMerchant(item, currency, amount);
+        }
+        public void BuyStation( RPGCurrency currency, int amount, int station)
+        {
+            Buy(currency, amount, station);
         }
 
 

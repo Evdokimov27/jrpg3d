@@ -13,6 +13,7 @@ TagManager:
   - end_move
   - off_navmesh
   - Electro
+  - Hub
   layers:
   - Default
   - TransparentFX

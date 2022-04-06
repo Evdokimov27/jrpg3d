@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyIcon: {fileID: 1379487949602403003}
   amountText: {fileID: 4369516738919991541}
-  currency: {fileID: 11400000, guid: 362c20ee5c0e7b745a40913278d8d75d, type: 2}
+  currency: {fileID: 0}
 --- !u!222 &5257829090301261683
 CanvasRenderer:
   m_ObjectHideFlags: 0
