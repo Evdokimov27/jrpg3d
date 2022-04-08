@@ -25,20 +25,19 @@ namespace BLINK.Controller
         }
         void Update()
         {
-
             goal = GameObject.FindWithTag("end_move").transform;
             UnityEngine.AI.NavMeshAgent agent
                 = GetComponent<UnityEngine.AI.NavMeshAgent>();
             agent.destination = goal.position;
             if (rot == 1)
             {
-                
+                GetComponent<RPGBThirdPersonController>().RotationSettings.UseControlRotation = false;
                 player.rotation = Quaternion.Euler(0, 180, 0);
                 //Debug.Log(player.eulerAngles.y);
                 if (player.eulerAngles.y == 180)
                 {
                     rot = 0;
-                }
+                }   
             }
         }
 
@@ -47,15 +46,18 @@ namespace BLINK.Controller
         {
             if (other.gameObject.tag == "move")
             {
+                GetComponent<RPGBThirdPersonController>().RotationSettings._orientRotationToMovement = false;
                 controller_player.enabled = false;
                 agent_player.enabled = true;
                 move_point = goal.gameObject;
             }
             else if (other.gameObject.tag == "end_move")
             {
+                GetComponent<RPGBThirdPersonController>().RotationSettings._orientRotationToMovement = true;
+                GetComponent<RPGBThirdPersonController>().RotationSettings.UseControlRotation = true;
                 cube.SetActive(true);
                 rot = 1;
-                agent_player.enabled = false;
+                agent_player.enabled = false;     
                 controller_player.enabled = true;
 
             }

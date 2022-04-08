@@ -69,10 +69,10 @@ MonoBehaviour:
   inCombatOverriden: 0
   ProjectileCheckLayer:
     serializedVersion: 2
-    m_Bits: 5632
+    m_Bits: 0
   ProjectileDestroyLayer:
     serializedVersion: 2
-    m_Bits: 4608
+    m_Bits: 64
   LeapInterruptLayers:
     serializedVersion: 2
     m_Bits: 4608
@@ -108,9 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fd4c9fd701a5749afff3bee67977af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Hub: []
   draggedItemParent: {fileID: 0}
-  draggedItemImage: {fileID: 7349915464103215347, guid: c282329e2fd9eee47a2b4688c4300d35,
-    type: 3}
+  draggedItemImage: {fileID: 7349915464103215347, guid: c282329e2fd9eee47a2b4688c4300d35, type: 3}
   equippedArmors:
   - slotType: HELMET
     itemEquipped: {fileID: 0}
@@ -137,8 +137,7 @@ MonoBehaviour:
   - slotType: WEAPON2
     itemEquipped: {fileID: 0}
     temporaryItemDataID: -1
-  lootBagPrefab: {fileID: 9056473291098877132, guid: e0369926586ca3549bc495485a236897,
-    type: 3}
+  lootBagPrefab: {fileID: 9056473291098877132, guid: e0369926586ca3549bc495485a236897, type: 3}
   allWorldDroppedItems: []
 --- !u!114 &801858943298142282
 MonoBehaviour:
@@ -152,8 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867911ee6639694489bf50c881cd84cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelUpGO: {fileID: 3795313165698304477, guid: 2722e1b368e55924f8dd06b93a99b58b,
-    type: 3}
+  levelUpGO: {fileID: 3795313165698304477, guid: 2722e1b368e55924f8dd06b93a99b58b, type: 3}
   weaponTemplateLevelUpGO: {fileID: 0}
 --- !u!114 &801858943298142276
 MonoBehaviour:

@@ -44,7 +44,7 @@ namespace BLINK.Controller
 		[Header("Character Orientation")] [SerializeField]
 		private bool _useControlRotation = false;
 
-		[SerializeField] private bool _orientRotationToMovement = true;
+		[SerializeField] public bool _orientRotationToMovement = true;
 		public float MinRotationSpeed = 600.0f; // The turn speed when the player is at max speed (in degrees/second)
 		public float MaxRotationSpeed = 1200.0f; // The turn speed when the player is stationary (in degrees/second)
 

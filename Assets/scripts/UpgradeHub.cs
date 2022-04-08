@@ -39,8 +39,7 @@ namespace BLINK.RPGBuilder.Managers
 
         public void BuyThisItem(int ThisStation)
         {
-            InventoryManager.Instance.BuyStation(UpgradeStation[ThisStation].ThisCurrency, UpgradeStation[ThisStation].ThisCost, ThisStation);
-            
+            InventoryManager.Instance.BuyStation(UpgradeStation[ThisStation].ThisCurrency, UpgradeStation[ThisStation].ThisCost, ThisStation); 
         }     
 
     }

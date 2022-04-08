@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   automaticSave: 0
   automaticSaveDelay: 5
-  automaticSaveOnQuit: 1
+  automaticSaveOnQuit: 0
   clickToLoadScene: 0
   DelayAfterSceneLoad: 0
   LoadingScreenEndDelay: 0

@@ -1781,6 +1781,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4831491208707388157, guid: 339353d5ce69b9f4580b4bafb6deb1ca, type: 3}
+      propertyPath: m_Name
+      value: ---PAINTER---
+      objectReference: {fileID: 0}
     - target: {fileID: 4871167398130809670, guid: 339353d5ce69b9f4580b4bafb6deb1ca, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0

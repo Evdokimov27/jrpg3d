@@ -28,6 +28,7 @@ namespace BLINK.RPGBuilder.AI
                 cube.SetActive(false);
                 Debug.Log("Мобов нет");
                 Destroy(move);
+                GetComponent<RPGBThirdPersonController>().RotationSettings._orientRotationToMovement = true;
             }
 
         }
