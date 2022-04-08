@@ -13,6 +13,7 @@ namespace BLINK.Controller
         public NavMeshAgent agent_player;
         public Transform player;
         public GameObject move_point;
+        public GameObject PAINTER;
         public float speed = 1f;
         [SerializeField] public int rot = 0;
         [SerializeField] public GameObject cube;
@@ -22,6 +23,15 @@ namespace BLINK.Controller
             agent_player = GetComponent<NavMeshAgent>();
             ThirdPersonController = GetComponent<RPGBThirdPersonController>();
             player = GameObject.FindWithTag("Player").transform;
+            PAINTER = GameObject.FindWithTag("PAINTER");
+        }
+
+        public void CastActive()
+        {
+            if (Input.GetKey(KeyCode.F))
+            {
+                PAINTER.active = (!PAINTER.active);
+            }
         }
         void Update()
         {
@@ -30,8 +40,8 @@ namespace BLINK.Controller
                 = GetComponent<UnityEngine.AI.NavMeshAgent>();
             agent.destination = goal.position;
             if (rot == 1)
-            {
-                GetComponent<RPGBThirdPersonController>().RotationSettings.UseControlRotation = false;
+            { 
+                GetComponent<RPGBThirdPersonController>().RotationSettings.UseControlRotation = true;
                 player.rotation = Quaternion.Euler(0, 180, 0);
                 //Debug.Log(player.eulerAngles.y);
                 if (player.eulerAngles.y == 180)

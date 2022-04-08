@@ -24,11 +24,11 @@ namespace BLINK.RPGBuilder.AI
             if (obj.GetComponent<CapsuleCollider>() == null)
             {
                 ThirdPersonController.RotationSettings.OrientRotationToMovement = true;
-                controller_player.enabled = true;
-                cube.SetActive(false);
+                ThirdPersonController.MovementSettings.Acceleration = 25;
                 Debug.Log("Мобов нет");
                 Destroy(move);
                 GetComponent<RPGBThirdPersonController>().RotationSettings._orientRotationToMovement = true;
+                cube.SetActive(false);
             }
 
         }
@@ -39,8 +39,9 @@ namespace BLINK.RPGBuilder.AI
                 {
                     obj = other.gameObject;
                     ThirdPersonController.RotationSettings.OrientRotationToMovement = false;
-                    agent_player.enabled = false;
-                    controller_player.enabled = false;
+                    agent_player.enabled = true;
+                    ThirdPersonController.MovementSettings.Acceleration = 0;
+                    controller_player.enabled = true;
             }
             Debug.Log("Мобы есть");
         }

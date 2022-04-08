@@ -9943,6 +9943,7 @@ MonoBehaviour:
   agent_player: {fileID: 0}
   player: {fileID: 0}
   move_point: {fileID: 0}
+  PAINTER: {fileID: 5128543499434381760, guid: 2e0c6e5357fee1a488b90df07beb4238, type: 3}
   speed: 1
   rot: 0
   cube: {fileID: 5356479700225781784}

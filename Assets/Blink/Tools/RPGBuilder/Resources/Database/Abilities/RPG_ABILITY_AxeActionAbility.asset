@@ -16,6 +16,7 @@ MonoBehaviour:
   _name: AxeActionAbility
   _fileName: RPG_ABILITY_AxeActionAbility
   displayName: AxeActionAbility
+  Tag: 
   icon: {fileID: 0}
   learnedByDefault: 1
   abilityType: 2
