@@ -968,7 +968,7 @@ namespace BLINK.RPGBuilder.Managers
             }
         }
 
-        private bool checkTarget(CombatNode casterInfo, RPGAbility.RPGAbilityRankData rankREF)
+        public bool checkTarget(CombatNode casterInfo, RPGAbility.RPGAbilityRankData rankREF)
         {
             if (rankREF.targetType != RPGAbility.TARGET_TYPES.TARGET_INSTANT &&
                 rankREF.targetType != RPGAbility.TARGET_TYPES.TARGET_PROJECTILE) return true;

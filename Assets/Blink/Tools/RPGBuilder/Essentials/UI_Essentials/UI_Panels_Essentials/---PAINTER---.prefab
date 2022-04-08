@@ -4618,10 +4618,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityID: 150000001a0000000600000030000000
   cooldown:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  target: {fileID: 0}
 --- !u!1 &7945204745838724922
 GameObject:
   m_ObjectHideFlags: 0

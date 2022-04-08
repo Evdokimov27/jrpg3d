@@ -17,6 +17,7 @@ namespace BLINK.Controller
         public float speed = 1f;
         [SerializeField] public int rot = 0;
         [SerializeField] public GameObject cube;
+        KeyCode SpellKey = RPGBuilderUtilities.GetCurrentKeyByActionKeyName("CAST_SPELL_BOOK");
         private void Start()
         {
             controller_player = GetComponent<CharacterController>();
@@ -26,15 +27,14 @@ namespace BLINK.Controller
             PAINTER = GameObject.FindWithTag("PAINTER");
         }
 
-        public void CastActive()
-        {
-            if (Input.GetKey(KeyCode.F))
-            {
-                PAINTER.active = (!PAINTER.active);
-            }
-        }
+
         void Update()
         {
+                if (Input.GetKeyDown(SpellKey))
+                {
+                PAINTER.GetComponent<Canvas>().enabled = !PAINTER.GetComponent<Canvas>().enabled;
+                }
+
             goal = GameObject.FindWithTag("end_move").transform;
             UnityEngine.AI.NavMeshAgent agent
                 = GetComponent<UnityEngine.AI.NavMeshAgent>();
