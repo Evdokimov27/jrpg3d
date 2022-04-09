@@ -16,6 +16,6 @@ MonoBehaviour:
   _name: WORLD_SPAWN
   _fileName: RPG_WORLD_POSITION_WORLD_SPAWN
   displayName: WORLD_SPAWN
-  position: {x: 473.3, y: 0, z: 468.3}
+  position: {x: 0, y: 0, z: 0}
   useRotation: 1
   rotation: {x: -0, y: -180, z: 0}
