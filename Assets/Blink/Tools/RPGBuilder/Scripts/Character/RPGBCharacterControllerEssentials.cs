@@ -390,6 +390,8 @@ namespace BLINK.RPGBuilder.Character
             {
                 if (!builtInController.ClickToRotate && playerIsDead) return;
                 builtInController.ClickToRotate = state;
+                Cursor.lockState = !state ? CursorLockMode.Locked : CursorLockMode.Confined;
+                Cursor.visible = state;
             }
 
             if (!state)

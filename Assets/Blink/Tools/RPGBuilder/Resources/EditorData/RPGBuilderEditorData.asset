@@ -22,12 +22,13 @@ MonoBehaviour:
   exportDirectoryName: Export1
   exportDirectoryFullPath: C:/Users/User/Documents/Blink/VideoExport/Export1
   importDirectoryPath: C:/Users/User/Documents/Blink/VideoExport/
-  upgradeDirectoryPath: /
+  upgradeDirectoryPath: 
   overrideDatabaseWhenImporting: 1
   MinEditorWidth: 1050
   MinEditorHeight: 550
   RPGBuilderLogo: {fileID: 21300000, guid: d8f8aa9f26f6fd94f84fe2c79e640147, type: 3}
-  RPGBuilderLogoHover: {fileID: 21300000, guid: 9e35849a92368ae45b8a3f5bf76d1584, type: 3}
+  RPGBuilderLogoHover: {fileID: 21300000, guid: 9e35849a92368ae45b8a3f5bf76d1584,
+    type: 3}
   BlinkLogoOff: {fileID: 21300000, guid: 2da8eb93362c3e94c9c5c69124a34594, type: 3}
   BlinkLogoOn: {fileID: 21300000, guid: e8378f5eb2dff7c42aa557b9a37a3ea7, type: 3}
   BlinkBanner: {fileID: 21300000, guid: 8286a45874bb413418b22aadae67141f, type: 3}
@@ -61,13 +62,20 @@ MonoBehaviour:
   actionButtonsY: 37.5
   ModuleButtonsY: 37.5
   DarkThemeBackground: {fileID: 2800000, guid: 2a6b871a27693874fac8d71c97572cfe, type: 3}
-  LightThemeBackground: {fileID: 2800000, guid: 450d74c4d5d78494c917fe9069b02952, type: 3}
-  DarkThemeBackgroundHover: {fileID: 2800000, guid: 2b5625194a3dfda44a5e89919604d1a4, type: 3}
-  LightThemeBackgroundHover: {fileID: 2800000, guid: 259fcd7bc8b63f440bc97c00734b87e7, type: 3}
-  DarkThemeModuleSearchBackground: {fileID: 2800000, guid: 2a6b871a27693874fac8d71c97572cfe, type: 3}
-  DarkThemeModuleSearchBackgroundHover: {fileID: 2800000, guid: 259fcd7bc8b63f440bc97c00734b87e7, type: 3}
-  LightThemeModuleSearchBackground: {fileID: 2800000, guid: 450d74c4d5d78494c917fe9069b02952, type: 3}
-  LightThemeModuleSearchBackgroundHover: {fileID: 2800000, guid: 22ee2cc845e52c04ea17775bc33d1a13, type: 3}
+  LightThemeBackground: {fileID: 2800000, guid: 450d74c4d5d78494c917fe9069b02952,
+    type: 3}
+  DarkThemeBackgroundHover: {fileID: 2800000, guid: 2b5625194a3dfda44a5e89919604d1a4,
+    type: 3}
+  LightThemeBackgroundHover: {fileID: 2800000, guid: 259fcd7bc8b63f440bc97c00734b87e7,
+    type: 3}
+  DarkThemeModuleSearchBackground: {fileID: 2800000, guid: 2a6b871a27693874fac8d71c97572cfe,
+    type: 3}
+  DarkThemeModuleSearchBackgroundHover: {fileID: 2800000, guid: 259fcd7bc8b63f440bc97c00734b87e7,
+    type: 3}
+  LightThemeModuleSearchBackground: {fileID: 2800000, guid: 450d74c4d5d78494c917fe9069b02952,
+    type: 3}
+  LightThemeModuleSearchBackgroundHover: {fileID: 2800000, guid: 22ee2cc845e52c04ea17775bc33d1a13,
+    type: 3}
   searchIcon: {fileID: 2800000, guid: 6cdd04d1447d79342924ed485bcd9a6c, type: 3}
   defaultElementIcon: {fileID: 21300000, guid: c99ec436c87639f4b8eac48640bd05b0, type: 3}
   abilityNullSprite: {fileID: 2800000, guid: 2fb82248f893ddc459132cce60a28e18, type: 3}
@@ -372,15 +380,22 @@ MonoBehaviour:
   - {fileID: 100212, guid: 8ef39a0bbeacad9478b8a037f5f18ce5, type: 3}
   - {fileID: 100284, guid: 741ec3e5ab6a2a04d9c7d16b6003bcff, type: 3}
   cafofoPartnerImage: {fileID: 21300000, guid: 5d148aa1531f39647b291ab90fbd0c1d, type: 3}
-  GabrielAguiarPartnerImage: {fileID: 21300000, guid: a6a3b6d4fedd4374388ddcfac615ba7d, type: 3}
+  GabrielAguiarPartnerImage: {fileID: 21300000, guid: a6a3b6d4fedd4374388ddcfac615ba7d,
+    type: 3}
   RDRPartnerImage: {fileID: 21300000, guid: c4c89e363371c1745b7b07668df789df, type: 3}
-  TitanForgePartnerImage: {fileID: 21300000, guid: 8b02a68b5a0e113409c76e880716f7a0, type: 3}
+  TitanForgePartnerImage: {fileID: 21300000, guid: 8b02a68b5a0e113409c76e880716f7a0,
+    type: 3}
   PONETIPartnerImage: {fileID: 21300000, guid: f2b47b102a1d69849b9c0fddca77b1f4, type: 3}
-  MalbersAnimationParterImage: {fileID: 21300000, guid: 9824145afee02744abddf235ca1713b3, type: 3}
-  BOXOPHOBICPartnerImage: {fileID: 21300000, guid: a23348856300e8047b5ea2774aa11c4b, type: 3}
-  PolyartStudioPartnerImage: {fileID: 21300000, guid: ea1ea709d2a04cc45a9249c37ddd25ca, type: 3}
-  StaggartPartnerImage: {fileID: 21300000, guid: 174112722cb0ce24abdc6a24fe675e2f, type: 3}
-  InfinityPBRPartnerImage: {fileID: 21300000, guid: 930995048d8fe554f9f79e7fb44f81a0, type: 3}
+  MalbersAnimationParterImage: {fileID: 21300000, guid: 9824145afee02744abddf235ca1713b3,
+    type: 3}
+  BOXOPHOBICPartnerImage: {fileID: 21300000, guid: a23348856300e8047b5ea2774aa11c4b,
+    type: 3}
+  PolyartStudioPartnerImage: {fileID: 21300000, guid: ea1ea709d2a04cc45a9249c37ddd25ca,
+    type: 3}
+  StaggartPartnerImage: {fileID: 21300000, guid: 174112722cb0ce24abdc6a24fe675e2f,
+    type: 3}
+  InfinityPBRPartnerImage: {fileID: 21300000, guid: 930995048d8fe554f9f79e7fb44f81a0,
+    type: 3}
   sceneLoaderList:
   - sceneName: Main Menu
     scene: {fileID: 102900000, guid: 633760486851e0444bb3c9f6ad7e1fbc, type: 3}
@@ -388,10 +403,6 @@ MonoBehaviour:
     scene: {fileID: 102900000, guid: 1d756824ce51a404a9f8136e4c5b4464, type: 3}
   - sceneName: DEMO
     scene: {fileID: 102900000, guid: f89f8fdf4492100489d95509b6a7a633, type: 3}
-  - sceneName: WORLD
-    scene: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-  - sceneName: HUB
-    scene: {fileID: 102900000, guid: 82a48ba30dbc1604bb22b09ed22cc3ce, type: 3}
   categoriesData:
   - CategoryName: Combat
     subCategoriesData:
@@ -723,4 +734,5 @@ MonoBehaviour:
       exportOn: 1
       importOn: 1
     Active: 1
-  npcSpawnerMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
+  npcSpawnerMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80,
+    type: 3}

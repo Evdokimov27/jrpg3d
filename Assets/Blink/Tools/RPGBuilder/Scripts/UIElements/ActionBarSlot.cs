@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using BLINK.RPGBuilder.LogicMono;
 using BLINK.RPGBuilder.Managers;
 using BLINK.RPGBuilder.UI;
 using TMPro;
@@ -22,10 +21,10 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     public CharacterData.ActionBarSlotContentType contentType;
 
     public bool acceptAbilities = true, acceptItems = true;
-
+    
     public Image icon, background, cooldownOverlay, toggledOverlay;
     public TextMeshProUGUI cooldownText, keyText, stackText;
-
+    
     private RPGAbility thisAb;
     public RPGAbility ThisAbility
     {
@@ -40,7 +39,7 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     }
 
     private GameObject curDraggedSlot;
-
+    
     public bool dragAllowed = true;
 
     public void Init(RPGAbility ab)
@@ -56,7 +55,7 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         background.enabled = false;
         stackText.enabled = false;
         UpdateKeyText();
-
+        
     }
     public void Init(RPGItem item)
     {
@@ -69,7 +68,7 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         icon.enabled = true;
         icon.sprite = thisItem.icon;
         background.enabled = true;
-
+        
         Sprite itemQualitySprite = RPGBuilderUtilities.getItemRaritySprite(item.rarity);
         if (itemQualitySprite != null)
         {
@@ -80,7 +79,7 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         {
             background.enabled = false;
         }
-
+        
         int ttlCount = InventoryManager.Instance.getTotalCountOfItem(item);
         UpdateSlot(ttlCount);
         UpdateKeyText();
@@ -90,7 +89,7 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     {
         keyText.text = RPGBuilderUtilities.GetKeybindText(RPGBuilderUtilities.GetCurrentKeyByActionKeyName(actionKeyName));
     }
-
+    
     public void UpdateSlot(int ttlStack)
     {
         stackText.enabled = true;
@@ -102,10 +101,10 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         contentType = CharacterData.ActionBarSlotContentType.None;
         thisAb = null;
         thisItem = null;
-
+        
         UpdateKeyText();
     }
-
+    
     public void ClickUseSlot()
     {
         switch (contentType)
@@ -119,8 +118,6 @@ public class ActionBarSlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
                 break;
         }
     }
-
-
 
     public void ShowTooltip()
     {

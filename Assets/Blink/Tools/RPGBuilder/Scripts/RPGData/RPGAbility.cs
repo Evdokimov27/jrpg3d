@@ -11,7 +11,6 @@ public class RPGAbility : ScriptableObject
     public string _name;
     public string _fileName;
     public string displayName;
-    public string Tag;
     public Sprite icon;
     public bool learnedByDefault;
 
@@ -268,7 +267,6 @@ public class RPGAbility : ScriptableObject
         learnedByDefault = newAbilityDATA.learnedByDefault;
         abilityType = newAbilityDATA.abilityType;
         displayName = newAbilityDATA.displayName;
-        Tag = newAbilityDATA.Tag;
     }
 
     public void copyData(RPGAbilityRankData original, RPGAbilityRankData copied)

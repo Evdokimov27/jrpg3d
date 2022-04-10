@@ -29,6 +29,6 @@ MonoBehaviour:
     cost: 15
   - itemID: 45
     itemREF: {fileID: 11400000, guid: 17de2468f5c992d45bb2879ad2f6e4dc, type: 2}
-    currencyID: 1
-    currencyREF: {fileID: 11400000, guid: 7045362cf5efb3b4f858811a16536f7c, type: 2}
+    currencyID: 0
+    currencyREF: {fileID: 11400000, guid: 3867fead1dc71464f8d362779b4029be, type: 2}
     cost: 15

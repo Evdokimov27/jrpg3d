@@ -223,8 +223,19 @@ namespace BLINK.Controller
         public bool isAimingTransition;
         protected override void SetCameraAiming(bool isAiming)
         {
-
-           
+            if (CombatManager.playerCombatNode.appearanceREF.isShapeshifted &&
+                !RPGBuilderUtilities.canActiveShapeshiftCameraAim(CombatManager.playerCombatNode)) return;
+            controller.CameraSettings.isAiming = isAiming;
+            controller.RotationSettings.UseControlRotation = isAiming;
+            controller.RotationSettings.OrientRotationToMovement = !isAiming;
+            isAimingTransition = true;
+            
+            anim.SetBool("isAiming", isAiming);
+            
+            if (isAiming)
+                CrosshairDisplayManager.Instance.ShowCrosshair();
+            else
+                CrosshairDisplayManager.Instance.HideCrosshair();
         }
 
         /*
@@ -426,6 +437,8 @@ namespace BLINK.Controller
         {
             if (playerIsDead) return;
             controller.cameraCanRotate = state;
+            Cursor.visible = !state;
+            Cursor.lockState = state ? CursorLockMode.Locked : CursorLockMode.None;
         }
 
         public override void ToggleCameraMouseLook()
@@ -442,12 +455,12 @@ namespace BLINK.Controller
 
         public override void StartSprint()
         {
-        //   controller.isSprinting = true;
+            controller.isSprinting = true;
             
         }
         public override void EndSprint()
         {
-        //    controller.isSprinting = false;
+            controller.isSprinting = false;
             isResetingSprintCamFOV = true;
         }
 

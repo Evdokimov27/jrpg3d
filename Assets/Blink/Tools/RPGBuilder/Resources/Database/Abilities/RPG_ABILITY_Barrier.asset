@@ -26,9 +26,6 @@ MonoBehaviour:
     castTime: 0
     castInRun: 0
     castBarVisible: 1
-    faceCursorWhileCasting: 1
-    faceCursorWhenOnCastStart: 1
-    faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0
     animationTriggered: 0
     comboStarsAfterCastComplete: 0
@@ -71,7 +68,6 @@ MonoBehaviour:
     isProjectileNearbyUnit: 0
     projectileDestroyedByEnvironment: 1
     projectileAffectedByGravity: 0
-    projectileShootOnClickPosition: 0
     mustLookAtTarget: 1
     squareWidth: 0
     squareLength: 0
@@ -125,22 +121,7 @@ MonoBehaviour:
       spreadUnitMax: 0
       delay: 0
     casterEffectsApplied: []
-    visualEffects:
-    - activationType: 0
-      EffectGO: {fileID: 0}
-      SocketName: 
-      UseNodeSocket: 0
-      ParentedToCaster: 0
-      Sound: {fileID: 8300000, guid: bc8b194dfa0e6224281972ff0cb103ce, type: 3}
-      SoundParentedToEffect: 0
-      positionOffset: {x: 0, y: 0, z: 0}
-      effectScale: {x: 1, y: 1, z: 1}
-      duration: 5
-      delay: 0
-      isDestroyedOnDeath: 1
-      isDestroyedOnStun: 1
-      isDestroyedOnStealth: 0
-      isDestroyedOnStealthEnd: 0
+    visualEffects: []
     visualAnimations:
     - activationType: 0
       parameterType: 3

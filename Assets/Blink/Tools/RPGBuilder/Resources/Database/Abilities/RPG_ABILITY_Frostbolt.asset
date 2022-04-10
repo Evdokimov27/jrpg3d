@@ -41,13 +41,13 @@ MonoBehaviour:
       itemRequiredCount: 0
       consumeItem: 0
       weaponRequired: 
-      useCost: 10
+      useCost: 1
       statCostID: 2
       statCostREF: {fileID: 11400000, guid: 4c6514ad02566de459909c0ef1145207, type: 2}
       costType: 1
       inCombat: 0
       stealthed: 0
-    targetType: 8
+    targetType: 4
     HitSettings:
     - alignment: 0
       hitPlayer: 0
@@ -56,21 +56,13 @@ MonoBehaviour:
       hitEnemy: 1
       hitSelf: 0
       hitPet: 0
-      hitOwner: 1
-    - alignment: 2
-      hitPlayer: 1
-      hitAlly: 0
-      hitNeutral: 1
-      hitEnemy: 1
-      hitSelf: 0
-      hitPet: 1
       hitOwner: 0
     isToggle: 0
     isToggleCostOnTrigger: 0
     toggledTriggerInterval: 0
     MaxUnitHit: 1
     minRange: 0
-    maxRange: 100
+    maxRange: 0
     standTimeDuration: 0
     canRotateInStandTime: 0
     castSpeedSlowAmount: 0.25
@@ -109,7 +101,8 @@ MonoBehaviour:
     groundHitTime: 0
     groundHitCount: 1
     groundHitInterval: 0
-    projectileEffect: {fileID: 3069674416539443529, guid: 192062bd2f5e97a4dab526858c497199, type: 3}
+    projectileEffect: {fileID: 3069674416539443529, guid: 192062bd2f5e97a4dab526858c497199,
+      type: 3}
     projectileSocketName: Projectile1
     projectileTargetSocketName: 
     projectileUseNodeSocket: 0
@@ -124,10 +117,11 @@ MonoBehaviour:
     colliderRadius: 0.75
     colliderHeight: 0
     groundVisualEffect: {fileID: 0}
-    effectPositionOffset: {x: 0, y: 1, z: 1}
+    effectPositionOffset: {x: 0, y: 1, z: 0}
     groundVisualEffectDuration: 5
     hitEffectUseSocket: 0
-    hitEffect: {fileID: 802780333837422227, guid: f132995891d19db448281b49d7690bd7, type: 3}
+    hitEffect: {fileID: 802780333837422227, guid: f132995891d19db448281b49d7690bd7,
+      type: 3}
     hitEffectDuration: 3
     hitEffectSocketName: ProjectileHit
     hitEffectPositionOffset: {x: 0, y: 0.5, z: 0}
@@ -136,7 +130,7 @@ MonoBehaviour:
     groundLeapDuration: 0
     groundLeapHeight: 0
     groundLeapSpeed: 0
-    cooldown: 3
+    cooldown: 1.1
     isGCD: 1
     startCDOnActivate: 1
     CanUseDuringGCD: 0
@@ -173,7 +167,8 @@ MonoBehaviour:
     casterEffectsApplied: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be, type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be,
+        type: 3}
       SocketName: Projectile1
       UseNodeSocket: 1
       ParentedToCaster: 1
@@ -188,7 +183,8 @@ MonoBehaviour:
       isDestroyedOnStealth: 0
       isDestroyedOnStealthEnd: 0
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be, type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be,
+        type: 3}
       SocketName: Projectile2
       UseNodeSocket: 1
       ParentedToCaster: 1

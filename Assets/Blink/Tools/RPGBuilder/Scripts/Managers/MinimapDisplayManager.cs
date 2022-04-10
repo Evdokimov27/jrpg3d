@@ -11,7 +11,6 @@ namespace BLINK.RPGBuilder.Managers
         public RectTransform mapContainer, playerArrow, panel;
         public Image minimapImage;
         public TextMeshProUGUI regionName;
-        public GameObject Minimap;
 
         public Transform playerTransform;
         public float mapScale = 0.1f;
@@ -24,7 +23,6 @@ namespace BLINK.RPGBuilder.Managers
         {
             if (Instance != null) return;
             Instance = this;
-
         }
 
         public static MinimapDisplayManager Instance { get; private set; }
@@ -41,7 +39,6 @@ namespace BLINK.RPGBuilder.Managers
         private void Update()
         {
             if (Initialized) UpdateMinimap();
-            Minimap.SetActive(false);
         }
 
         private void UpdateMinimap()

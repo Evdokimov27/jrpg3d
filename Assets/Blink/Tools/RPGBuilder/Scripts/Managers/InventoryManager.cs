@@ -10,15 +10,13 @@ using BLINK.RPGBuilder.World;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-
 namespace BLINK.RPGBuilder.Managers
 {
     public class InventoryManager : MonoBehaviour
     {
-        [SerializeField]public GameObject[] Hub;
         public Transform draggedItemParent;
         public GameObject draggedItemImage;
-
+        public GameObject[] Hub;
 
         [Serializable]
         public class INVENTORY_EQUIPPED_ITEMS
@@ -1174,7 +1172,7 @@ namespace BLINK.RPGBuilder.Managers
             return curTotalCurrencyAmount >= priceInLowestCurrency;
         }
 
-        public int getTotalCurrencyOfGroup(RPGCurrency initialCurrency)
+        private int getTotalCurrencyOfGroup(RPGCurrency initialCurrency)
         {
             var thisTotalLowestCurrency = 0;
             var lowestCurrency = RPGBuilderUtilities.GetCurrencyFromID(initialCurrency.lowestCurrencyID);
@@ -1227,7 +1225,7 @@ namespace BLINK.RPGBuilder.Managers
             return totalcount;
         }
 
-        public int getValueInLowestCurrency(RPGCurrency initialCurrency, int amount)
+        private int getValueInLowestCurrency(RPGCurrency initialCurrency, int amount)
         {
             var lowestCurrency = RPGBuilderUtilities.GetCurrencyFromID(initialCurrency.lowestCurrencyID);
             if (initialCurrency == lowestCurrency && initialCurrency.aboveCurrencies.Count == 0)
@@ -1248,7 +1246,7 @@ namespace BLINK.RPGBuilder.Managers
             return thisTotalLowestCurrency;
         }
 
-        public void ConvertCurrenciesToGroups(RPGCurrency lowestCurrency, int totalAmount)
+        private void ConvertCurrenciesToGroups(RPGCurrency lowestCurrency, int totalAmount)
         {
             setCurrencyAmount(lowestCurrency, 0);
             foreach (var t in lowestCurrency.aboveCurrencies)
@@ -1318,7 +1316,6 @@ namespace BLINK.RPGBuilder.Managers
             var priceInLowestCurrency = getValueInLowestCurrency(currency, cost);
             if (curTotalCurrencyAmount >= priceInLowestCurrency)
             {
-
                 // enough to buy
                 int itemsLeftOver = RPGBuilderUtilities.HandleItemLooting(item.ID, 1, false, false);
                 if (itemsLeftOver == 0)
@@ -1339,7 +1336,11 @@ namespace BLINK.RPGBuilder.Managers
 
             if (InventoryDisplayManager.Instance.thisCG.alpha == 1) InventoryDisplayManager.Instance.UpdateCurrency();
         }
-        
+        public void BuyStation(RPGCurrency currency, int amount, int station)
+        {
+            Buy(currency, amount, station);
+        }
+
         public bool isitemAlreadyInLootList(int itemID, List<TemporaryLootItemData> lootList)
         {
             foreach (var item in lootList)
@@ -1399,12 +1400,8 @@ namespace BLINK.RPGBuilder.Managers
         {
             TryBuyItemFromMerchant(item, currency, amount);
         }
-        public void BuyStation( RPGCurrency currency, int amount, int station)
-        {
-            Buy(currency, amount, station);
-        }
 
-
+        
         public static InventoryManager Instance { get; private set; }
     }
 }

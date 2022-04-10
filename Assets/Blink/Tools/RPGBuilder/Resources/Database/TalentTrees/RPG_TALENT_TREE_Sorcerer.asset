@@ -75,7 +75,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 21
-      abilityRequiredREF: {fileID: 11400000, guid: ec73f2182706b064ca8a491ca005b003, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: ec73f2182706b064ca8a491ca005b003,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -121,7 +122,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 23
-      abilityRequiredREF: {fileID: 11400000, guid: 20e0c4e2191ffe147a9bfdc8744f72ce, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: 20e0c4e2191ffe147a9bfdc8744f72ce,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -180,7 +182,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 22
-      abilityRequiredREF: {fileID: 11400000, guid: 77c21ff3272ac6c4da141aa851dfd6d8, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: 77c21ff3272ac6c4da141aa851dfd6d8,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -226,7 +229,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 26
-      abilityRequiredREF: {fileID: 11400000, guid: 9004a385329843a499668a4d30a4de75, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: 9004a385329843a499668a4d30a4de75,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -295,17 +299,4 @@ MonoBehaviour:
     bonusREF: {fileID: 11400000, guid: 0c43d81a424804f489ecfa09999f7bd0, type: 2}
     Tier: 6
     Row: 5
-    requirements: []
-  - nodeType: 0
-    _name: 
-    abilityID: 48
-    abilityREF: {fileID: 11400000, guid: f916636ff8bae6a4a959ae8adb116803, type: 2}
-    recipeID: -1
-    recipeREF: {fileID: 0}
-    resourceNodeID: -1
-    resourceNodeREF: {fileID: 0}
-    bonusID: -1
-    bonusREF: {fileID: 0}
-    Tier: 1
-    Row: 3
     requirements: []

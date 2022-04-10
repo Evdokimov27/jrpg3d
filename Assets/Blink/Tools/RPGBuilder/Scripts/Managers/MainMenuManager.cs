@@ -81,6 +81,7 @@ namespace BLINK.RPGBuilder.Managers
             }
             else AudioListener.volume = PlayerPrefs.GetFloat("MasterVolume");
             
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             
             if (Instance != null) yield break;

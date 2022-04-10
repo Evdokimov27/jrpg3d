@@ -75,7 +75,8 @@ MonoBehaviour:
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
-  NPCVisual: {fileID: 8922295634012456540, guid: b978b39b7421c0a43a6d7ad27424aab1, type: 3}
+  NPCVisual: {fileID: 8922295634012456540, guid: b978b39b7421c0a43a6d7ad27424aab1,
+    type: 3}
   modelPosition: {x: 0, y: 0, z: 0}
   modelScale: {x: 1, y: 1, z: 1}
   nameplateYOffset: 2.25

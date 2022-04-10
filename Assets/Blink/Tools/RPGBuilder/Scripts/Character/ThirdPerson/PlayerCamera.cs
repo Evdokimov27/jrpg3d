@@ -14,11 +14,7 @@ namespace BLINK.Controller
 
 		private Vector3 _cameraVelocity;
 
-        private void Start()
-        {
-		
-		}
-        public void SetPosition(Vector3 position)
+		public void SetPosition(Vector3 position)
 		{
 			Rig.position = Vector3.SmoothDamp(Rig.position, position, ref _cameraVelocity, PositionSmoothDamp);
 		}
@@ -26,17 +22,29 @@ namespace BLINK.Controller
 		public void SetControlRotation(Vector2 controlRotation)
 		{
 			// Y Rotation (Yaw Rotation)
-			Quaternion rigTargetLocalRotation = Quaternion.Euler(5.0f, 0.0f, 0.0f);
+			Quaternion rigTargetLocalRotation = Quaternion.Euler(0.0f, controlRotation.y, 0.0f);
 
 			// X Rotation (Pitch Rotation)
-			Quaternion pivotTargetLocalRotation = Quaternion.Euler(5.0f, 0.0f, 0.0f);
+			Quaternion pivotTargetLocalRotation = Quaternion.Euler(controlRotation.x, 0.0f, 0.0f);
 
+			if (RotationSpeed > 0.0f)
+			{
+				Rig.localRotation =
+					Quaternion.Slerp(Rig.localRotation, rigTargetLocalRotation, RotationSpeed * Time.deltaTime);
+				Pivot.localRotation = Quaternion.Slerp(Pivot.localRotation, pivotTargetLocalRotation,
+					RotationSpeed * Time.deltaTime);
+			}
+			else
+			{
+				Rig.localRotation = rigTargetLocalRotation;
+				Pivot.localRotation = pivotTargetLocalRotation;
+			}
 		}
 
 		public void InitCameraPosition(Vector2 controlRotation)
 		{
-			Quaternion rigTargetLocalRotation = Quaternion.Euler(5.0f, 0.0f, 0.0f);
-			Quaternion pivotTargetLocalRotation = Quaternion.Euler(5.0f, 0.0f, 0.0f);
+			Quaternion rigTargetLocalRotation = Quaternion.Euler(0.0f, controlRotation.y, 0.0f);
+			Quaternion pivotTargetLocalRotation = Quaternion.Euler(controlRotation.x, 0.0f, 0.0f);
 			Rig.localRotation = rigTargetLocalRotation;
 			Pivot.localRotation = pivotTargetLocalRotation;
 		}

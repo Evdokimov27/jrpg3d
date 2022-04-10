@@ -16,7 +16,6 @@ MonoBehaviour:
   _name: Fireball
   _fileName: RPG_ABILITY_Fireball
   displayName: Fireball
-  Tag: 
   icon: {fileID: 21300000, guid: d23c70ce4c06a2641bc79cd36654bd40, type: 3}
   learnedByDefault: 1
   abilityType: 0
@@ -27,25 +26,29 @@ MonoBehaviour:
     castTime: 0.8
     castInRun: 1
     castBarVisible: 1
-    faceCursorWhileCasting: 0
+    faceCursorWhileCasting: 1
     faceCursorWhenOnCastStart: 1
     faceCursorWhenOnCastEnd: 1
-    canBeUsedStunned: 1
+    canBeUsedStunned: 0
     animationTriggered: 0
     comboStarsAfterCastComplete: 0
     cancelStealth: 1
     effectsRequirements: []
-    useRequirements: []
+    useRequirements:
+    - requirementType: 2
+      itemRequiredID: -1
+      itemRequiredREF: {fileID: 0}
+      itemRequiredCount: 0
+      consumeItem: 0
+      weaponRequired: 
+      useCost: 1
+      statCostID: 2
+      statCostREF: {fileID: 11400000, guid: 4c6514ad02566de459909c0ef1145207, type: 2}
+      costType: 1
+      inCombat: 0
+      stealthed: 0
     targetType: 4
     HitSettings:
-    - alignment: 2
-      hitPlayer: 1
-      hitAlly: 0
-      hitNeutral: 1
-      hitEnemy: 1
-      hitSelf: 0
-      hitPet: 0
-      hitOwner: 0
     - alignment: 0
       hitPlayer: 0
       hitAlly: 0
@@ -59,7 +62,7 @@ MonoBehaviour:
     toggledTriggerInterval: 0
     MaxUnitHit: 1
     minRange: 0
-    maxRange: 100
+    maxRange: 0
     standTimeDuration: 0
     canRotateInStandTime: 0
     castSpeedSlowAmount: 0.25
@@ -68,7 +71,7 @@ MonoBehaviour:
     coneDegree: 0
     ConeHitCount: 1
     ConeHitInterval: 0
-    AOERadius: 10
+    AOERadius: 0
     AOEHitCount: 1
     AOEHitInterval: 0
     linearWidth: 0
@@ -88,7 +91,7 @@ MonoBehaviour:
     isProjectileNearbyUnit: 0
     projectileDestroyedByEnvironment: 1
     projectileAffectedByGravity: 0
-    projectileShootOnClickPosition: 1
+    projectileShootOnClickPosition: 0
     mustLookAtTarget: 1
     squareWidth: 0
     squareLength: 0
@@ -98,7 +101,8 @@ MonoBehaviour:
     groundHitTime: 0
     groundHitCount: 1
     groundHitInterval: 0
-    projectileEffect: {fileID: 3773895536607866115, guid: 2aa25da0b188eff4bb670ac8598862d4, type: 3}
+    projectileEffect: {fileID: 3773895536607866115, guid: 2aa25da0b188eff4bb670ac8598862d4,
+      type: 3}
     projectileSocketName: Projectile1
     projectileTargetSocketName: 
     projectileUseNodeSocket: 0
@@ -113,24 +117,25 @@ MonoBehaviour:
     colliderRadius: 0.75
     colliderHeight: 0
     groundVisualEffect: {fileID: 0}
-    effectPositionOffset: {x: 0, y: 1, z: 1}
+    effectPositionOffset: {x: 0, y: 1, z: 0}
     groundVisualEffectDuration: 5
     hitEffectUseSocket: 0
-    hitEffect: {fileID: 3592326399059066619, guid: 989e01cbb1f6fb942987d84baf583e8c, type: 3}
+    hitEffect: {fileID: 3592326399059066619, guid: 989e01cbb1f6fb942987d84baf583e8c,
+      type: 3}
     hitEffectDuration: 3
     hitEffectSocketName: ProjectileHit
     hitEffectPositionOffset: {x: 0, y: 0.5, z: 0}
     hitAttachedToNode: 1
-    channelTime: 5
+    channelTime: 0
     groundLeapDuration: 0
     groundLeapHeight: 0
     groundLeapSpeed: 0
-    cooldown: 3
+    cooldown: 1.35
     isGCD: 1
     startCDOnActivate: 1
-    CanUseDuringGCD: 1
+    CanUseDuringGCD: 0
     isSharingCooldown: 0
-    cooldownTag: Potions
+    cooldownTag: 
     effectsApplied:
     - effectID: 22
       chance: 100
@@ -141,10 +146,20 @@ MonoBehaviour:
       spreadDistanceMax: 0
       spreadUnitMax: 0
       delay: 0
+    - effectID: 23
+      chance: 50
+      effectREF: {fileID: 11400000, guid: 66a54a0be140f3c4cb4c6efed69e8148, type: 2}
+      effectRank: 0
+      target: 0
+      isSpread: 0
+      spreadDistanceMax: 0
+      spreadUnitMax: 0
+      delay: 0
     casterEffectsApplied: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5, type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5,
+        type: 3}
       SocketName: Projectile1
       UseNodeSocket: 1
       ParentedToCaster: 1
@@ -159,7 +174,8 @@ MonoBehaviour:
       isDestroyedOnStealth: 0
       isDestroyedOnStealthEnd: 0
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5, type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5,
+        type: 3}
       SocketName: Projectile2
       UseNodeSocket: 1
       ParentedToCaster: 1

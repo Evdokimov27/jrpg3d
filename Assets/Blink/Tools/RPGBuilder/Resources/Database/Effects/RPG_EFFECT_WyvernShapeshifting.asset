@@ -72,6 +72,7 @@ MonoBehaviour:
     petSPawnCount: 0
     petScaleWithCharacter: 0
     knockbackDistance: 0
+    knockbackSpeed: 0
     motionDistance: 5
     motionSpeed: 0.5
     motionDirection: {x: 0, y: 0, z: 0}
@@ -103,11 +104,14 @@ MonoBehaviour:
     dispelEffectType: 0
     dispelEffectTag: 
     dispelEffectID: -1
-    shapeshiftingModel: {fileID: 100210, guid: 4303bbb5d9502684086805d1bd8495a7, type: 3}
+    shapeshiftingModel: {fileID: 1983253701023856, guid: 8c0798864b5c08f43bafa6fd2ccfc714,
+      type: 3}
     shapeshiftingmodelPosition: {x: 0, y: 0, z: -0.5}
     shapeshiftingmodelScale: {x: 0.5, y: 0.5, z: 0.5}
-    shapeshiftingAnimatorController: {fileID: 9100000, guid: fc8268651569ba148aa3420ca07f7a07, type: 2}
-    shapeshiftingAnimatorAvatar: {fileID: 9000000, guid: 4303bbb5d9502684086805d1bd8495a7, type: 3}
+    shapeshiftingAnimatorController: {fileID: 9100000, guid: fc8268651569ba148aa3420ca07f7a07,
+      type: 2}
+    shapeshiftingAnimatorAvatar: {fileID: 9000000, guid: 3da4f2af5de1ce440a17c3064c8f2277,
+      type: 3}
     shapeshiftingAnimatorUseRootMotion: 0
     shapeshiftingAnimatorUpdateMode: 0
     shapeshiftingAnimatorCullingMode: 0
@@ -126,8 +130,9 @@ MonoBehaviour:
       spreadUnitMax: 0
       delay: 0
     visualEffects:
-    - activationType: 1
-      EffectGO: {fileID: 7034618709502686422, guid: 7d8f7da339003cf419f158c4f0299f9b, type: 3}
+    - activationType: 0
+      EffectGO: {fileID: 7034618709502686422, guid: 7d8f7da339003cf419f158c4f0299f9b,
+        type: 3}
       SocketName: 
       UseNodeSocket: 0
       ParentedToCaster: 1

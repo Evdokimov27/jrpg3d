@@ -16,7 +16,6 @@ MonoBehaviour:
   _name: AxeActionAbility
   _fileName: RPG_ABILITY_AxeActionAbility
   displayName: AxeActionAbility
-  Tag: 
   icon: {fileID: 0}
   learnedByDefault: 1
   abilityType: 2
@@ -27,16 +26,13 @@ MonoBehaviour:
     castTime: 0.35
     castInRun: 1
     castBarVisible: 0
-    faceCursorWhileCasting: 1
-    faceCursorWhenOnCastStart: 1
-    faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0
     animationTriggered: 0
     comboStarsAfterCastComplete: 0
     cancelStealth: 1
     effectsRequirements: []
     useRequirements: []
-    targetType: 5
+    targetType: 1
     HitSettings:
     - alignment: 0
       hitPlayer: 0
@@ -50,8 +46,8 @@ MonoBehaviour:
     isToggleCostOnTrigger: 0
     toggledTriggerInterval: 0
     MaxUnitHit: 1
-    minRange: 1
-    maxRange: 100
+    minRange: 3
+    maxRange: 0
     standTimeDuration: 0
     canRotateInStandTime: 0
     castSpeedSlowAmount: 0.8
@@ -80,7 +76,6 @@ MonoBehaviour:
     isProjectileNearbyUnit: 0
     projectileDestroyedByEnvironment: 1
     projectileAffectedByGravity: 0
-    projectileShootOnClickPosition: 0
     mustLookAtTarget: 1
     squareWidth: 0
     squareLength: 0

@@ -31,7 +31,7 @@ MonoBehaviour:
   - ShowedInEditor: 1
     mainDamageType: 2
     secondaryDamageType: Cold Damage
-    Damage: 1000
+    Damage: 10
     alteredStatREF: {fileID: 11400000, guid: 3ba412ea703bc2f4697ddcf06f7f13ec, type: 2}
     alteredStatID: 0
     FlatCalculation: 0
@@ -49,7 +49,8 @@ MonoBehaviour:
     UltimateGain: 0
     delay: 0
     projectilesReflectedCount: 0
-    requiredEffectREF: {fileID: 11400000, guid: 9529d63ce0331b74c8fa733c9b924cbf, type: 2}
+    requiredEffectREF: {fileID: 11400000, guid: 9529d63ce0331b74c8fa733c9b924cbf,
+      type: 2}
     requiredEffectID: 31
     requiredEffectDamageModifier: 100
     damageStatREF: {fileID: 0}
@@ -72,6 +73,7 @@ MonoBehaviour:
     petSPawnCount: 0
     petScaleWithCharacter: 0
     knockbackDistance: 0
+    knockbackSpeed: 0
     motionDistance: 5
     motionSpeed: 0.5
     motionDirection: {x: 0, y: 0, z: 0}
@@ -112,13 +114,13 @@ MonoBehaviour:
     shapeshiftingAnimatorUpdateMode: 0
     shapeshiftingAnimatorCullingMode: 0
     shapeshiftingOverrideMainActionBar: 0
-    canCameraAim: 0
     shapeshiftingActiveAbilities: 
     showStealthActionBar: 1
     nestedEffects: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 802780333837422227, guid: f132995891d19db448281b49d7690bd7, type: 3}
+      EffectGO: {fileID: 802780333837422227, guid: f132995891d19db448281b49d7690bd7,
+        type: 3}
       SocketName: 
       UseNodeSocket: 0
       ParentedToCaster: 0

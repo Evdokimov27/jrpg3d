@@ -28,15 +28,15 @@ MonoBehaviour:
   dialogueREF: {fileID: 0}
   questGiven: []
   questCompleted: []
-  AggroRange: 20
-  distanceFromTarget: 20
-  distanceFromOwner: 20
-  DistanceToTargetReset: 20
+  AggroRange: 15
+  distanceFromTarget: 2.75
+  distanceFromOwner: 3
+  DistanceToTargetReset: 40
   RoamRange: 25
   RoamDelay: 10
   MinRespawn: 40
   MaxRespawn: 80
-  corpseDespawnTime: 5
+  corpseDespawnTime: 15
   MinEXP: 3
   MaxEXP: 6
   EXPBonusPerLevel: 1
@@ -46,10 +46,13 @@ MonoBehaviour:
     amount: 20
   MinLevel: 0
   MaxLevel: 0
-  isScalingWithPlayer: 1
+  isScalingWithPlayer: 0
   abilities:
-  - abilityID: 47
-    abilityREF: {fileID: 11400000, guid: dac1f59e912964040b562eba22a4fe1b, type: 2}
+  - abilityID: 11
+    abilityREF: {fileID: 11400000, guid: 4ce4320c1c581af49b63a1bea52de970, type: 2}
+    condition: 0
+  - abilityID: 14
+    abilityREF: {fileID: 11400000, guid: 2cef47a787783174c9371e1b92d6fda9, type: 2}
     condition: 0
   stats:
   - statID: 1
@@ -87,12 +90,13 @@ MonoBehaviour:
     lootTableREF: {fileID: 11400000, guid: 73a861ae1e9593c4a9adfa6e8dab4bb0, type: 2}
     dropRate: 60
   isCombatEnabled: 1
-  isMovementEnabled: 0
+  isMovementEnabled: 1
   isCollisionEnabled: 0
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
-  NPCVisual: {fileID: 8069623038708389838, guid: 0e62193d17995de4e9dbb2463c594323, type: 3}
+  NPCVisual: {fileID: 8069623038708389838, guid: 0e62193d17995de4e9dbb2463c594323,
+    type: 3}
   modelPosition: {x: 0, y: 0, z: -0.5}
   modelScale: {x: 1.4, y: 1.4, z: 1.4}
   nameplateYOffset: 1.5
@@ -104,10 +108,9 @@ MonoBehaviour:
   navmeshAgentRadius: 1.1
   navmeshAgentHeight: 2
   navmeshAgentAngularSpeed: 1000
-  navmeshObstacleAvoidance: 0
   colliderType: 0
   colliderCenter: {x: 0, y: 1, z: 0}
-  colliderSize: {x: 1, y: 1, z: 1}
+  colliderSize: {x: 0, y: 0, z: 0}
   colliderRadius: 1
   colliderHeight: 1
   aggroLinks:

@@ -31,6 +31,7 @@ namespace BLINK.RPGBuilder.Managers
             RPGBuilderEssentials.Instance.HandleDATAReset();
             CharacterData.Instance.RESET_CHARACTER_DATA(true);
             
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
             LoadingScreenManager.Instance.LoadMainMenu();
         }

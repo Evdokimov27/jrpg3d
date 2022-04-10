@@ -98,7 +98,7 @@ namespace BLINK.Controller
 			// Update other inputs
 			CameraInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
-
+			JumpInput = Input.GetKey(RPGBuilderUtilities.GetCurrentKeyByActionKeyName("Jump"));
 		}
 	}
 }

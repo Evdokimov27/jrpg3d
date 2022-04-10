@@ -930,7 +930,7 @@ namespace BLINK.RPGBuilder.Managers
             if (rankREF.extraAbilityExecuted != null) InitExtraAbility(nodeCombatInfo, rankREF.extraAbilityExecuted);
         }
 
-        public bool checkCooldown(CombatNode nodeCombatInfo, RPGAbility thisAbility)
+        private bool checkCooldown(CombatNode nodeCombatInfo, RPGAbility thisAbility)
         {
             if (nodeCombatInfo.nodeType == CombatNode.COMBAT_NODE_TYPE.player)
                 return CharacterData.Instance.isAbilityCDReady(thisAbility);
@@ -968,7 +968,7 @@ namespace BLINK.RPGBuilder.Managers
             }
         }
 
-        public bool checkTarget(CombatNode casterInfo, RPGAbility.RPGAbilityRankData rankREF)
+        private bool checkTarget(CombatNode casterInfo, RPGAbility.RPGAbilityRankData rankREF)
         {
             if (rankREF.targetType != RPGAbility.TARGET_TYPES.TARGET_INSTANT &&
                 rankREF.targetType != RPGAbility.TARGET_TYPES.TARGET_PROJECTILE) return true;
@@ -1569,7 +1569,9 @@ namespace BLINK.RPGBuilder.Managers
                 case RPGAbility.AbilityType.Normal:
                     StartCooldown(casterNode, abSlotIndex, rankREF, ability.ID);
                     break;
-                
+                case RPGAbility.AbilityType.PlayerAutoAttack:
+                    playerCombatNode.InitAACooldown(getAutoAttackCD());
+                    break;
                 case RPGAbility.AbilityType.PlayerActionAbility:
                     playerCombatNode.InitActionAbilityCooldown(ability.ID,
                         rankREF.cooldown);
@@ -4713,21 +4715,6 @@ namespace BLINK.RPGBuilder.Managers
             
             combatNode.InitializeCombatNode();
             return combatNode;
-        }
-
-        internal void InitAbility(object caster, RPGAbility rPGAbility, bool v)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void InitAbility(RPGAbility rPGAbility, bool v)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void InitAbility(CombatNode combatNode, object caster, RPGAbility rPGAbility, bool v)
-        {
-            throw new NotImplementedException();
         }
     }
 }

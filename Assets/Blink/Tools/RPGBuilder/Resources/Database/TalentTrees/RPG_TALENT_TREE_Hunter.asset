@@ -62,7 +62,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 9
-      abilityRequiredREF: {fileID: 11400000, guid: 2825befc3b1ae2c499a3e9dd8bdfeccf, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: 2825befc3b1ae2c499a3e9dd8bdfeccf,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -121,7 +122,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 10
-      abilityRequiredREF: {fileID: 11400000, guid: ff4ea31cf78ab1144a06d081a3c5caa3, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: ff4ea31cf78ab1144a06d081a3c5caa3,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -167,7 +169,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 10
-      abilityRequiredREF: {fileID: 11400000, guid: ff4ea31cf78ab1144a06d081a3c5caa3, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: ff4ea31cf78ab1144a06d081a3c5caa3,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -213,7 +216,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 10
-      abilityRequiredREF: {fileID: 11400000, guid: ff4ea31cf78ab1144a06d081a3c5caa3, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: ff4ea31cf78ab1144a06d081a3c5caa3,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -259,7 +263,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 19
-      abilityRequiredREF: {fileID: 11400000, guid: db6f649d6b400324abf51ed823287524, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: db6f649d6b400324abf51ed823287524,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -305,7 +310,8 @@ MonoBehaviour:
       bonusRequiredID: -1
       bonusRequiredREF: {fileID: 0}
       abilityRequiredID: 18
-      abilityRequiredREF: {fileID: 11400000, guid: 5bec6ae97cc97274e9515e0d79cb1d08, type: 2}
+      abilityRequiredREF: {fileID: 11400000, guid: 5bec6ae97cc97274e9515e0d79cb1d08,
+        type: 2}
       craftingRecipeRequiredID: -1
       recipeRequiredREF: {fileID: 0}
       resourceNodeRequiredID: -1
@@ -348,17 +354,4 @@ MonoBehaviour:
     bonusREF: {fileID: 11400000, guid: e828d6dfd79a2224fabf0e833b1b0ab4, type: 2}
     Tier: 6
     Row: 5
-    requirements: []
-  - nodeType: 0
-    _name: 
-    abilityID: 29
-    abilityREF: {fileID: 11400000, guid: b71a057718f5abc4db74cc267b6c025a, type: 2}
-    recipeID: -1
-    recipeREF: {fileID: 0}
-    resourceNodeID: -1
-    resourceNodeREF: {fileID: 0}
-    bonusID: -1
-    bonusREF: {fileID: 0}
-    Tier: 1
-    Row: 1
     requirements: []

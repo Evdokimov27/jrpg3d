@@ -20,8 +20,8 @@ MonoBehaviour:
   loadingBG: {fileID: 0}
   minimapImage: {fileID: 0}
   mapBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+    m_Center: {x: 5, y: 5, z: 5}
+    m_Extent: {x: 10, y: 10, z: 10}
   mapSize: {x: 1024, y: 1024}
   startPositionID: 3
   startPositionREF: {fileID: 11400000, guid: 7dbc1bd6d97edee48a21db86b5d94879, type: 2}
