@@ -44,3 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveAxisDeadZone: 0.2
+  useNewKeys: 0
+  smoothTime: 1
+  dampenTime: 0.2
+  smoothInput: 1
+  CameraInput: {x: 0, y: 0}
+  speed: 0
+  abilityBook: {fileID: 0}
+  lastMoveInput: {x: 0, y: 0}

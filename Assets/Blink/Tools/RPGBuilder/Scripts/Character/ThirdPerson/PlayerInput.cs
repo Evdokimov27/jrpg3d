@@ -13,13 +13,22 @@ namespace BLINK.Controller
 
 		public Vector2 MoveInput { get; private set; }
 		public Vector2 LastMoveInput { get; private set; }
-		public Vector2 CameraInput { get; private set; }
+		public Vector2 CameraInput;
+		[SerializeField] public float speed;
+		public GameObject abilityBook;
 		public bool JumpInput { get; set; }
 		public bool HasMoveInput { get; private set; }
 		public Vector2 lastMoveInput;
 
+        public void Start()
+        {
+			
+			speed = 1;
+        }
+		
 		public void UpdateInput()
 		{
+			abilityBook = GameObject.FindWithTag("Player");
 			// Update MoveInput
 			Vector2 moveInput = new Vector2(0, 0);
 			if (!useNewKeys)
@@ -96,8 +105,9 @@ namespace BLINK.Controller
 			HasMoveInput = hasMoveInput;
 
 			// Update other inputs
-			CameraInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+			CameraInput = new Vector2(Input.GetAxis("Mouse X") * speed, Input.GetAxis("Mouse Y") * speed);
 
+			speed = abilityBook.GetComponent<AbilityBook>().speed;
 			JumpInput = Input.GetKey(RPGBuilderUtilities.GetCurrentKeyByActionKeyName("Jump"));
 		}
 	}

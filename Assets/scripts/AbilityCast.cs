@@ -104,10 +104,6 @@ namespace BLINK.RPGBuilder.Managers
                 {
                     cooldown[cd_id] -= Time.deltaTime;
                 }
-                else
-                {
-                    cooldown[cd_id] = 0;
-                }
             }
         }
        
