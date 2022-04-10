@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 943d49eb769cd944fade3a1cd7491609, type: 3}
-  m_Name: RPG_ABILITY_Fireball
+  m_Name: RPG_ABILITY_Fireball Green
   m_EditorClassIdentifier: 
-  ID: 21
-  _name: Fireball
-  _fileName: RPG_ABILITY_Fireball
-  displayName: Fireball
+  ID: 46
+  _name: Fireball Green
+  _fileName: RPG_ABILITY_Fireball Green
+  displayName: Fireball Green
   icon: {fileID: 21300000, guid: d23c70ce4c06a2641bc79cd36654bd40, type: 3}
   learnedByDefault: 1
   abilityType: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
     linearWidth: 0
     linearHeight: 0
     linearLength: 0
-    projectileSpeed: 50
+    projectileSpeed: 10
     projectileDistance: 0
     projectileAngleSpread: 0
     projectileCount: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
     groundHitTime: 0
     groundHitCount: 1
     groundHitInterval: 0
-    projectileEffect: {fileID: 3773895536607866115, guid: 2aa25da0b188eff4bb670ac8598862d4, type: 3}
+    projectileEffect: {fileID: 100006, guid: 906ef3748a66347cfb2d72de10092732, type: 3}
     projectileSocketName: Projectile1
     projectileTargetSocketName: 
     projectileUseNodeSocket: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     casterEffectsApplied: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 100006, guid: 44dd4fdbb6f10429a844c51183a4c84e, type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: 24de8a3746c4860409c60d84e8643595, type: 3}
       SocketName: Projectile1
       UseNodeSocket: 1
       ParentedToCaster: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
       isDestroyedOnStealth: 0
       isDestroyedOnStealthEnd: 0
     - activationType: 0
-      EffectGO: {fileID: 100006, guid: 906ef3748a66347cfb2d72de10092732, type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: 24de8a3746c4860409c60d84e8643595, type: 3}
       SocketName: Projectile2
       UseNodeSocket: 1
       ParentedToCaster: 1
