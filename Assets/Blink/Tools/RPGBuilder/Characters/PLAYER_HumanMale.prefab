@@ -8517,6 +8517,8 @@ GameObject:
   - component: {fileID: 3139501295895247808}
   - component: {fileID: 2044816853868918809}
   - component: {fileID: -2671290345981132742}
+  - component: {fileID: 428528384401160024}
+  - component: {fileID: -8287023374079582551}
   m_Layer: 10
   m_Name: PLAYER_HumanMale
   m_TagString: Player
@@ -9014,7 +9016,7 @@ MonoBehaviour:
   CameraSettings:
     isAiming: 0
     normalPivot: {x: 0, y: 1.75, z: -1.25}
-    aimingPivot: {x: 0.5, y: 1.75, z: 0.3}
+    aimingPivot: {x: 0.75, y: 1.75, z: 1.75}
     aimInSpeed: 5
     aimOutSpeed: 5
     NormalFOV: 60
@@ -9141,7 +9143,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaeb191b6f6ef264ea9845e5a35a01b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  speed: 0
+  SpeedMouse: {fileID: 0}
+  player: {fileID: 0}
   PAINTER: {fileID: 0}
+--- !u!114 &428528384401160024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373494219852488072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac0e9bfed6fd5140b68296d58053704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8287023374079582551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373494219852488072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e3b6a431c69d743a0379d3f5f634e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6464807451495185248
 GameObject:
   m_ObjectHideFlags: 0

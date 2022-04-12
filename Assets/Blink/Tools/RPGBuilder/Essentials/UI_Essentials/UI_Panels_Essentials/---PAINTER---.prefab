@@ -4554,6 +4554,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recognizer: {fileID: 5007081753320119354}
+  sphere: {fileID: 0}
+  sphere_pos: {x: 0, y: 0}
   line: {fileID: 8824279564867782297}
   scoreToAccept: 0.8
   minLines: 1
@@ -5143,7 +5145,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1881.1, y: 850}
+  m_SizeDelta: {x: 1812.67, y: 850}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8640870679134195859
 GameObject:

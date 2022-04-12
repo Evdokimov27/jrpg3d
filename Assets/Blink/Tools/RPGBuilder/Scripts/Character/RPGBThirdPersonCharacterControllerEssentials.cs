@@ -221,7 +221,7 @@ namespace BLINK.Controller
          */
 
         public bool isAimingTransition;
-        protected override void SetCameraAiming(bool isAiming)
+        public void SetCameraAiming(bool isAiming)
         {
             if (CombatManager.playerCombatNode.appearanceREF.isShapeshifted &&
                 !RPGBuilderUtilities.canActiveShapeshiftCameraAim(CombatManager.playerCombatNode)) return;
@@ -324,7 +324,7 @@ namespace BLINK.Controller
             }
         }
 
-        private void Update()
+        public void Update()
         {
             if (Input.GetKeyDown(RPGBuilderUtilities.GetCurrentKeyByActionKeyName("TOGGLE_CAMERA_AIM_MODE")))
             {

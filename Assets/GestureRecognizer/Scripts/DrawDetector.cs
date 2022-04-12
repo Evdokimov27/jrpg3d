@@ -15,7 +15,8 @@ namespace GestureRecognizer {
 	public class DrawDetector : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler {
 		
 		public Recognizer recognizer;
-
+		public Transform sphere;
+		public Vector2 sphere_pos;
 		public UILineRenderer line;
 		private List<UILineRenderer> lines;
 
@@ -52,7 +53,10 @@ namespace GestureRecognizer {
 			lines = new List<UILineRenderer> (){ line };
 			rectTransform = transform as RectTransform;
 			UpdateLines ();
+			sphere_pos = new Vector2 (sphere.transform.position.x, sphere.transform.position.y);
+			RealToLine(sphere_pos);
 		}
+
 
 		void OnValidate(){
 			maxLines = Mathf.Max (minLines, maxLines);
@@ -74,7 +78,8 @@ namespace GestureRecognizer {
 			}
 		}
 
-		Vector2 RealToLine(Vector2 position){
+		Vector2 RealToLine(Vector2 position){ 
+			
 			var local = rectTransform.InverseTransformPoint (position);
 			var normalized = Rect.PointToNormalized (rectTransform.rect, local);
 			return normalized;

@@ -47,7 +47,7 @@ MonoBehaviour:
     defaultKey: 49
     isUnique: 1
     category: COMBAT
-  - actionName: ACTION_BAR_SLOT_2
+  - actionName: ACTION_BAS_SLOT_2
     actionDisplayName: Action Bar Slot 2
     defaultKey: 50
     isUnique: 1
@@ -117,11 +117,12 @@ MonoBehaviour:
     defaultKey: 32
     isUnique: 1
     category: MOVEMENT
-  - actionName: TOGGLE_CURSOR
-    actionDisplayName: Toogle Cursor Visibility
-    defaultKey: 325
+  - actionName: USE_ABILITY_KEY
+    actionDisplayName: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+      \u0437\u0430\u043A\u043B\u0438\u043D\u0430\u043D\u0438\u0435"
+    defaultKey: 324
     isUnique: 1
-    category: CAMERA
+    category: COMBAT
   - actionName: UI_PANEL_CHARACTER
     actionDisplayName: Character Panel
     defaultKey: 99
@@ -145,11 +146,6 @@ MonoBehaviour:
   - actionName: COMBO2
     actionDisplayName: Combo 2
     defaultKey: 116
-    isUnique: 1
-    category: COMBAT
-  - actionName: ACTIVE_BLOCKING
-    actionDisplayName: Block
-    defaultKey: 324
     isUnique: 1
     category: COMBAT
   - actionName: SPRINT

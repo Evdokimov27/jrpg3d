@@ -2,19 +2,22 @@ using BLINK.RPGBuilder.LogicMono;
 using BLINK.RPGBuilder.Managers;
 using BLINK.RPGBuilder.UI;
 using System.Collections;
+using System.Windows;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+
 namespace BLINK.RPGBuilder.Managers
 {
-
     public class AbilityCast : MonoBehaviour
     {
         [SerializeField] public int[] abilityID;
         CombatNode caster;
         [SerializeField] float[] cooldown;
         [SerializeField] public GameObject target;
-        
-        
+        [SerializeField] public GameObject PAINTER;
+        public KeyCode UseAbilityKey;
         int ID;
 
         // Start is called before the first frame update
@@ -24,80 +27,85 @@ namespace BLINK.RPGBuilder.Managers
         }
         private void Start()
         {
+
             target = GameObject.Find("Target_Nameplate");
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (target.GetComponent<CanvasGroup>().alpha == 1)
+           
+            UseAbilityKey = RPGBuilderUtilities.GetCurrentKeyByActionKeyName("USE_ABILITY_KEY");
+            PAINTER = GameObject.FindWithTag("PAINTER");
+            if (Input.GetKeyDown(UseAbilityKey) && PAINTER.GetComponent<Canvas>().enabled == true)
             {
-                if (GetComponent<ExampleGestureHandler>().ID_Draw == "ILIYA")
-                {
-                    ID = 0;
-                    if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
+                    
+                    if (GetComponent<ExampleGestureHandler>().ID_Draw == "ILIYA")
                     {
-                        Debug.Log("fireball");
-                        if (cooldown[ID] <= 0)
+                        ID = 0;
+                        if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
                         {
-                            UseAbility();
-                            cooldown[ID] = 3;
+                            Debug.Log("fireball");
+                            if (cooldown[ID] <= 0)
+                            {
+                                UseAbility();
+                                cooldown[ID] = 3;
+                            }
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                         }
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
+                        else
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                     }
-                    else
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
-                }
-                if (GetComponent<ExampleGestureHandler>().ID_Draw == "horizontal")
-                {
-                    ID = 1;
-                    if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
+                    if (GetComponent<ExampleGestureHandler>().ID_Draw == "horizontal")
                     {
-                        Debug.Log("coldbolt");
-                        if (cooldown[ID] <= 0)
+                        ID = 1;
+                        if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
                         {
-                            UseAbility();
-                            cooldown[ID] = 5;
+                            Debug.Log("coldbolt");
+                            if (cooldown[ID] <= 0)
+                            {
+                                UseAbility();
+                                cooldown[ID] = 5;
+                            }
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                         }
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
+                        else
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                     }
-                    else
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
-                }
-                if (GetComponent<ExampleGestureHandler>().ID_Draw == "heart")
-                {
-                    ID = 2;
-                    if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
+                    if (GetComponent<ExampleGestureHandler>().ID_Draw == "heart")
                     {
-                        Debug.Log("barier");
-                        if (cooldown[ID] <= 0)
+                        ID = 2;
+                        if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
                         {
-                            UseAbility();
-                            cooldown[ID] = 5;
+                            Debug.Log("barier");
+                            if (cooldown[ID] <= 0)
+                            {
+                                UseAbility();
+                                cooldown[ID] = 5;
+                            }
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                         }
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
+                        else
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                     }
-                    else
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
-                }
-                if (GetComponent<ExampleGestureHandler>().ID_Draw == "bolt")
-                {
-                    ID = 3;
-                    if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
+                    if (GetComponent<ExampleGestureHandler>().ID_Draw == "bolt")
                     {
-                        Debug.Log("coldbolt");
-                        if (cooldown[ID] <= 0)
+                        ID = 3;
+                        if (RPGBuilderUtilities.isAbilityKnown(abilityID[ID]))
                         {
-                            UseAbility();
-                            cooldown[ID] = 5;
+                            Debug.Log("coldbolt");
+                            if (cooldown[ID] <= 0)
+                            {
+                                UseAbility();
+                                cooldown[ID] = 5;
+                            }
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                         }
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
+                        else
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
                     }
-                    else
-                        GetComponent<ExampleGestureHandler>().ID_Draw = null;
-                }
             }
-            else ErrorEventsDisplayManager.Instance.ShowErrorEvent("Для заклинания нужна цель", 3);
+          
             for (int cd_id = 0; cd_id < abilityID.Length + 1; cd_id++)
             {
                 if (cooldown[cd_id] > 0)

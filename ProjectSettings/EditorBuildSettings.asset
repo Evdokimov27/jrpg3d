@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_lvl.unity
     guid: ffee50c1efb4fae43b3416c4a71358d4
+  - enabled: 0
+    path: Assets/GestureRecognizer/Example/ExampleAlphabet.unity
+    guid: 9f9033096d24b7244b09b1fe3cd64c2e
   m_configObjects: {}
