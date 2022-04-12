@@ -26,7 +26,7 @@ public class ExampleGestureHandler : MonoBehaviour {
 	}
 
 	public void OnRecognize(RecognitionResult result){
-		StopAllCoroutines ();
+		StopAllCoroutines ();  
 		ShowAll ();
 		if (result != RecognitionResult.Empty) {
 			textResult.text = result.gesture.id + "\n" + Mathf.RoundToInt (result.score.score * 100) + "%";

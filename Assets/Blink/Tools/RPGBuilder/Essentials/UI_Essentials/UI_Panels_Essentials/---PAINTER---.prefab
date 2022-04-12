@@ -4618,13 +4618,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64549476afcbce64ca06618b05afa18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityID: 150000001a0000000600000030000000
-  cooldown:
-  - 1
-  - 1
-  - 1
-  - 1
   target: {fileID: 0}
+  PAINTER: {fileID: 0}
+  AbilityCasts:
+  - need_rune:
+    - {fileID: 11400000, guid: 09b65fb7c62749346b8dfcf56b7dcb5c, type: 2}
+    - {fileID: 11400000, guid: b9109c37e41ce7a4ea497eb2b245d1d5, type: 2}
+    - {fileID: 11400000, guid: 09b65fb7c62749346b8dfcf56b7dcb5c, type: 2}
+    pattern: {fileID: 11400000, guid: 09b65fb7c62749346b8dfcf56b7dcb5c, type: 2}
+    CastAbility: {fileID: 11400000, guid: ec73f2182706b064ca8a491ca005b003, type: 2}
+    cooldown_use: 0
+    cooldown_skill: 10
+  - need_rune:
+    - {fileID: 11400000, guid: b9109c37e41ce7a4ea497eb2b245d1d5, type: 2}
+    - {fileID: 11400000, guid: b9109c37e41ce7a4ea497eb2b245d1d5, type: 2}
+    - {fileID: 11400000, guid: 606b6abfa65091e469f7759779697930, type: 2}
+    - {fileID: 11400000, guid: b9109c37e41ce7a4ea497eb2b245d1d5, type: 2}
+    pattern: {fileID: 11400000, guid: b9109c37e41ce7a4ea497eb2b245d1d5, type: 2}
+    CastAbility: {fileID: 11400000, guid: 687d3daa3ab6add43b7ac2fffc766f92, type: 2}
+    cooldown_use: 0
+    cooldown_skill: 5
+  UseAbilityKey: 0
+  rune: []
 --- !u!1 &7945204745838724922
 GameObject:
   m_ObjectHideFlags: 0
