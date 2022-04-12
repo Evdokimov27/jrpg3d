@@ -14,6 +14,7 @@ namespace BLINK.RPGBuilder.Managers
     public class AbilityCast : MonoBehaviour
     {
         CombatNode caster;
+        [SerializeField] public int amountRuns;
         [SerializeField] public GameObject target;
         [SerializeField] public GameObject PAINTER;
         [SerializeField] public Ability[] AbilityCasts;
@@ -29,7 +30,7 @@ namespace BLINK.RPGBuilder.Managers
         }
         void Update()
         {
-            for (int h = 0; h < 5; h++)
+            for (int h = 0; h < amountRuns; h++)
             {
                 if (IconCombo[h].GetComponent<GesturePatternDraw>().pattern == null)
                 {
@@ -45,7 +46,7 @@ namespace BLINK.RPGBuilder.Managers
                 if (Input.GetKeyDown(KeyCode.J))
                 {
                     rune.Clear();
-                    for (int h = 0; h < 5; h++)
+                    for (int h = 0; h < amountRuns; h++)
                     {
                         IconCombo[h].GetComponent<GesturePatternDraw>().pattern = null;
                     }
@@ -65,7 +66,7 @@ namespace BLINK.RPGBuilder.Managers
                             
                         }
                     }
-                    for (int h = 0; h < 5; h++)
+                    for (int h = 0; h < amountRuns; h++)
                     {
                         IconCombo[rune.Count-1].GetComponent<GesturePatternDraw>().pattern = Runs[0];
                     }
