@@ -95,8 +95,7 @@ MonoBehaviour:
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
-  NPCVisual: {fileID: 7511823463203513381, guid: 2d8444e6a217de34ca6acb4250a71f82,
-    type: 3}
+  NPCVisual: {fileID: 7511823463203513381, guid: 2d8444e6a217de34ca6acb4250a71f82, type: 3}
   modelPosition: {x: 0, y: 0, z: -0.5}
   modelScale: {x: 1, y: 1, z: 1}
   nameplateYOffset: 1.5
@@ -108,6 +107,7 @@ MonoBehaviour:
   navmeshAgentRadius: 1.1
   navmeshAgentHeight: 2
   navmeshAgentAngularSpeed: 1000
+  navmeshObstacleAvoidance: 0
   colliderType: 0
   colliderCenter: {x: 0, y: 1, z: 0}
   colliderSize: {x: 0, y: 0, z: 0}

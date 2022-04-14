@@ -70,6 +70,13 @@ MonoBehaviour:
     baseValue: 200
     bonusPerLevel: 0
     vitalityActions: []
+  - statID: 8
+    statREF: {fileID: 11400000, guid: 92924701acc15da41b9dc216d74dbb82, type: 2}
+    minValue: 0
+    maxValue: 100
+    baseValue: 99
+    bonusPerLevel: 0
+    vitalityActions: []
   lootTables:
   - lootTableID: 7
     lootTableREF: {fileID: 11400000, guid: 4148af8d314798e428fee3dbe159039a, type: 2}
@@ -86,8 +93,7 @@ MonoBehaviour:
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
-  NPCVisual: {fileID: 6933547920965923985, guid: f2529eb8a3d9f1f4ca03db75db55a397,
-    type: 3}
+  NPCVisual: {fileID: 6933547920965923985, guid: f2529eb8a3d9f1f4ca03db75db55a397, type: 3}
   modelPosition: {x: 0, y: 0, z: -0.6}
   modelScale: {x: 1, y: 1, z: 1}
   nameplateYOffset: 1.5
