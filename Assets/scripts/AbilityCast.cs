@@ -20,11 +20,14 @@ namespace BLINK.RPGBuilder.Managers
         [SerializeField] public Ability[] AbilityCasts;
         public KeyCode UseAbilityKey;
         public List <GesturePattern> rune;
+        public GesturePattern element;
         public GameObject[] IconCombo;
+        public GameObject IconElement;
         public GesturePattern[] Runs;
 
         private void Start()
         {
+            IconElement.GetComponent<GesturePatternDraw>().pattern = null;
             rune.Clear();
             target = GameObject.Find("Target_Nameplate");
         }
@@ -35,9 +38,25 @@ namespace BLINK.RPGBuilder.Managers
                 if (IconCombo[h].GetComponent<GesturePatternDraw>().pattern == null)
                 {
                     IconCombo[h].active = false;
+                   
                 }
-                else IconCombo[h].active = true;
+                else
+                {
+                    IconCombo[h].active = true;
+                }
+
+
+                if (IconElement.GetComponent<GesturePatternDraw>().pattern == null)
+                {
+                    IconElement.active = false;
+                }
+                else
+                {
+                    IconElement.active = true;
+                }
             }
+
+
 
             UseAbilityKey = RPGBuilderUtilities.GetCurrentKeyByActionKeyName("USE_ABILITY_KEY");
             PAINTER = GameObject.FindWithTag("PAINTER");
@@ -54,42 +73,49 @@ namespace BLINK.RPGBuilder.Managers
 
                 if (Input.GetKeyDown(KeyCode.K))
                 {
+
+
                     for (int i = 0; i < AbilityCasts.Length; i++)
                     {
                         for (int j = 0; j < AbilityCasts[i].need_rune.Length; j++)
+                        {
+                            if (GetComponent<ExampleGestureHandler>().ID_Draw == AbilityCasts[i].need_element.id)
                             {
+                                element = AbilityCasts[i].need_element;
+                                IconElement.GetComponent<GesturePatternDraw>().pattern = element;
+                            }
                             if (GetComponent<ExampleGestureHandler>().ID_Draw == AbilityCasts[i].need_rune[j].id)
-                            {
+                            { 
                                 rune.Add(AbilityCasts[i].need_rune[j]);
                                 Runs[0] = AbilityCasts[i].need_rune[j];
+                                IconCombo[rune.Count - 1].GetComponent<GesturePatternDraw>().pattern = Runs[0];
                             }
-                            
+
+                           
+
+
                         }
-                    }
-                    for (int h = 0; h < amountRuns; h++)
-                    {
-                        IconCombo[rune.Count-1].GetComponent<GesturePatternDraw>().pattern = Runs[0];
                     }
                 }
             }
             if (Input.GetKeyDown(UseAbilityKey))
             {
-                
+
                 for (int i = 0; i < AbilityCasts.Length; i++)
                 {
                     bool isEqual = rune.SequenceEqual(AbilityCasts[i].need_rune);
-                    if ((isEqual == true) && (AbilityCasts[i].cooldown_now <= 0))
-                        {
-                            CombatManager.Instance.InitAbility(CombatManager.playerCombatNode, RPGBuilderUtilities.GetAbilityFromID(AbilityCasts[i].CastAbility.ID), false);
-                            rune.Clear();
-                            AbilityCasts[i].cooldown_now = AbilityCasts[i].cooldown_skill;
-                        }
-                        else Debug.Log("Такого заклинания нет");
-                        Debug.Log(isEqual);
+                    if ((AbilityCasts[i].need_element == element) && (isEqual == true) && (AbilityCasts[i].cooldown_now <= 0))
+                    {
+                        CombatManager.Instance.InitAbility(CombatManager.playerCombatNode, RPGBuilderUtilities.GetAbilityFromID(AbilityCasts[i].CastAbility.ID), false);
+                        rune.Clear();
+                        AbilityCasts[i].cooldown_now = AbilityCasts[i].cooldown_skill;
+                    }
+                    else Debug.Log("Такого заклинания нет");
+                    Debug.Log(isEqual);
                 }
             }
-            
-          
+
+
             for (int cd_id = 0; cd_id < AbilityCasts.Length + 1; cd_id++)
             {
                 if (AbilityCasts[cd_id].cooldown_now > 0)
@@ -103,6 +129,7 @@ namespace BLINK.RPGBuilder.Managers
 [System.Serializable]
 public class Ability
 {
+    public GesturePattern need_element;
     public GesturePattern[] need_rune;
     public RPGAbility CastAbility;
     public float cooldown_now;
