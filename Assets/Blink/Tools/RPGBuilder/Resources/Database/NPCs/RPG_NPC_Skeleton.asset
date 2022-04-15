@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2eaea086ce51ea9419be768c6237eedb, type: 3}
-  m_Name: RPG_NPC_Villager_Warrior_Dialogue
+  m_Name: RPG_NPC_Skeleton
   m_EditorClassIdentifier: 
-  npcType: 6
-  ID: 7
-  _name: Villager_Warrior_Dialogue
-  _fileName: RPG_NPC_Villager_Warrior_Dialogue
+  npcType: 0
+  ID: 12
+  _name: Skeleton
+  _fileName: RPG_NPC_Skeleton
   displayName: Fighter
   icon: {fileID: 21300000, guid: 669be5e9f982a374bb8d518c31461d67, type: 3}
   isDummyTarget: 0
@@ -45,8 +45,8 @@ MonoBehaviour:
   MaxLevel: 15
   isScalingWithPlayer: 0
   abilities:
-  - abilityID: 11
-    abilityREF: {fileID: 11400000, guid: 4ce4320c1c581af49b63a1bea52de970, type: 2}
+  - abilityID: 17
+    abilityREF: {fileID: 11400000, guid: c71939135bbf26d438a3a38c711b0f03, type: 2}
     condition: 0
   stats:
   - statID: 0
@@ -56,14 +56,17 @@ MonoBehaviour:
     baseValue: 550
     bonusPerLevel: 0
     vitalityActions: []
-  lootTables: []
+  lootTables:
+  - lootTableID: 4
+    lootTableREF: {fileID: 11400000, guid: 8e587d7b92e4972449e5bbe8851d318c, type: 2}
+    dropRate: 100
   isCombatEnabled: 1
   isMovementEnabled: 1
   isCollisionEnabled: 0
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
-  NPCVisual: {fileID: 4169042911209104451, guid: 5b987de28858c564a96d5dcac5591009, type: 3}
+  NPCVisual: {fileID: 1623817811568398, guid: 3e4cf0221a0e8db41bcb50be99ebe457, type: 3}
   modelPosition: {x: 0, y: 0, z: 0}
   modelScale: {x: 1, y: 1, z: 1}
   nameplateYOffset: 2.25

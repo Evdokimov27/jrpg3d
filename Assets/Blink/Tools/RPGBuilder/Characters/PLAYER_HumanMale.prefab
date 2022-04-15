@@ -8519,6 +8519,7 @@ GameObject:
   - component: {fileID: -2671290345981132742}
   - component: {fileID: 428528384401160024}
   - component: {fileID: -8287023374079582551}
+  - component: {fileID: -4079747465851152697}
   m_Layer: 10
   m_Name: PLAYER_HumanMale
   m_TagString: Player
@@ -9145,6 +9146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   speed: 0
+  mouseSpeed: 10
   SpeedMouse: {fileID: 0}
   player: {fileID: 0}
   PAINTER: {fileID: 0}
@@ -9160,6 +9162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac0e9bfed6fd5140b68296d58053704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 
 --- !u!114 &-8287023374079582551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9170,6 +9173,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11e3b6a431c69d743a0379d3f5f634e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4079747465851152697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373494219852488072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d045e56afcb1574d98c0d42d9db0939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6464807451495185248

@@ -17,35 +17,28 @@ MonoBehaviour:
   _fileName: RPG_RACE_Human
   displayName: Human
   description: 
-  startingSceneID: 0
+  startingSceneID: 3
   startingSceneREF: {fileID: 0}
-  startingPositionID: 0
+  startingPositionID: 3
   startingPositionREF: {fileID: 0}
   factionREF: {fileID: 11400000, guid: 3373acf609049604096ebefd29b9dd77, type: 2}
   factionID: 0
   speciesID: -1
-  malePrefab: {fileID: 6373494219852488072, guid: 1fb8a18395915ed4cb03838d275d8970,
-    type: 3}
+  malePrefab: {fileID: 6373494219852488072, guid: 1fb8a18395915ed4cb03838d275d8970, type: 3}
   maleIcon: {fileID: 21300000, guid: 1a8f6fd0e567f5e4eb90ed11a0abd56c, type: 3}
-  femalePrefab: {fileID: 6373494219852488072, guid: 1fb8a18395915ed4cb03838d275d8970,
-    type: 3}
+  femalePrefab: {fileID: 6373494219852488072, guid: 1fb8a18395915ed4cb03838d275d8970, type: 3}
   femaleIcon: {fileID: 21300000, guid: 1a8f6fd0e567f5e4eb90ed11a0abd56c, type: 3}
   dynamicAnimator: 1
-  restAnimatorController: {fileID: 22100000, guid: bce07712ca593f34f9c226bb6b2bcba4,
-    type: 2}
-  combatAnimatorController: {fileID: 22100000, guid: 338280de24c75ba45a4e1a06218a1385,
-    type: 2}
+  restAnimatorController: {fileID: 22100000, guid: bce07712ca593f34f9c226bb6b2bcba4, type: 2}
+  combatAnimatorController: {fileID: 22100000, guid: 338280de24c75ba45a4e1a06218a1385, type: 2}
   availableClasses: []
   weaponTemplates:
   - weaponTemplateID: 0
-    weaponTemplateREF: {fileID: 11400000, guid: e36ee3951d73e1648b61cb9ef4c3cb01,
-      type: 2}
+    weaponTemplateREF: {fileID: 11400000, guid: e36ee3951d73e1648b61cb9ef4c3cb01, type: 2}
   - weaponTemplateID: 2
-    weaponTemplateREF: {fileID: 11400000, guid: f54c7f76ad6223548a628f947557cec3,
-      type: 2}
+    weaponTemplateREF: {fileID: 11400000, guid: f54c7f76ad6223548a628f947557cec3, type: 2}
   - weaponTemplateID: 1
-    weaponTemplateREF: {fileID: 11400000, guid: 7accf06b502d08d4793be3ec3e5817b0,
-      type: 2}
+    weaponTemplateREF: {fileID: 11400000, guid: 7accf06b502d08d4793be3ec3e5817b0, type: 2}
   stats: []
   startItems: []
   actionAbilities:
@@ -56,7 +49,7 @@ MonoBehaviour:
     abilityID: 20
   - keyType: 1
     key: 0
-    actionKeyName: ACTIVE_BLOCKING
+    actionKeyName: ACTION_BAR_SLOT_1
     abilityREF: {fileID: 0}
     abilityID: 8
   allocationStatPoints: 10

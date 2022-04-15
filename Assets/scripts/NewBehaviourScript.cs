@@ -15,15 +15,12 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            SceneManager.LoadScene(3);
-            player.transform.position = new Vector3 (0, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             player.transform.position = new Vector3(0, 0, 0);
+
         }
     }
 }
