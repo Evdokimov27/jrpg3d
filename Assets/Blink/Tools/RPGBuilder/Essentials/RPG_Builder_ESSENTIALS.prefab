@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 1380971231718293129}
   m_Layer: 0
   m_Name: RPG_Builder_ESSENTIALS
-  m_TagString: Untagged
+  m_TagString: characterData
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

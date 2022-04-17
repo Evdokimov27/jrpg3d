@@ -16,6 +16,9 @@ TagManager:
   - Hub
   - PAINTER
   - PAINTER_ICON
+  - Undefined
+  - AbilityCast
+  - characterData
   layers:
   - Default
   - TransparentFX

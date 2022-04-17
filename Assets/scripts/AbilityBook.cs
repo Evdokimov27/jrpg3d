@@ -30,7 +30,7 @@ using System;
             player = GameObject.FindWithTag("Player");
         }
 
-
+    public static AbilityCast Instance;
     // Update is called once per frame
     void Update()
         {

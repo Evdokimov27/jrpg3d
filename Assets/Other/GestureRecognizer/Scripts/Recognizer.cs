@@ -5,7 +5,6 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 using System.Threading;
-using AbilityCast;
 using BayatGames.SaveGameFree;
 
 namespace GestureRecognizer
@@ -89,7 +88,7 @@ namespace GestureRecognizer
         [Range(1, 4)]
         public int numberOfThreads = 1;
         public List<GesturePattern> patterns;
-        public AbilityCast.AbilityCast abilityCast;
+        public AbilityCast abilityCast;
        
         
         public void Update()
