@@ -15,6 +15,7 @@ TagManager:
   - Electro
   - Hub
   - PAINTER
+  - PAINTER_ICON
   layers:
   - Default
   - TransparentFX

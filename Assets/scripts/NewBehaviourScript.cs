@@ -22,5 +22,11 @@ public class NewBehaviourScript : MonoBehaviour
             player.transform.position = new Vector3(0, 0, 0);
 
         }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            player.transform.position = new Vector3(0, 0, 0);
+
+        }
     }
 }

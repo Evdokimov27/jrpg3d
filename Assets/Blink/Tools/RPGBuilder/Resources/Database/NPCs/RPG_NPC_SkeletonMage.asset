@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eaea086ce51ea9419be768c6237eedb, type: 3}
+  m_Name: RPG_NPC_SkeletonMage
+  m_EditorClassIdentifier: 
+  npcType: 0
+  ID: 12
+  _name: SkeletonMage
+  _fileName: RPG_NPC_SkeletonMage
+  displayName: "\u0421\u043A\u0435\u043B\u0435\u0442 \u041C\u0430\u0433"
+  icon: {fileID: 21300000, guid: 8c693490c5f1ba947bbdd27ba7c0e3b7, type: 3}
+  isDummyTarget: 0
+  factionREF: {fileID: 11400000, guid: 3373acf609049604096ebefd29b9dd77, type: 2}
+  factionID: 3
+  speciesID: -1
+  merchantTableID: -1
+  merchantTableREF: {fileID: 0}
+  dialogueID: 0
+  dialogueREF: {fileID: 11400000, guid: 506ccc9a41cae3e4f8a1f20cf7033aab, type: 2}
+  questGiven: []
+  questCompleted: []
+  AggroRange: 25
+  distanceFromTarget: 2.75
+  distanceFromOwner: 3
+  DistanceToTargetReset: 25
+  RoamRange: 25
+  RoamDelay: 15
+  MinRespawn: 5
+  MaxRespawn: 10
+  corpseDespawnTime: 15
+  MinEXP: 0
+  MaxEXP: 0
+  EXPBonusPerLevel: 0
+  factionRewards: []
+  MinLevel: 15
+  MaxLevel: 15
+  isScalingWithPlayer: 0
+  abilities:
+  - abilityID: 47
+    abilityREF: {fileID: 11400000, guid: dac1f59e912964040b562eba22a4fe1b, type: 2}
+    condition: 0
+  stats:
+  - statID: 0
+    statREF: {fileID: 11400000, guid: 3ba412ea703bc2f4697ddcf06f7f13ec, type: 2}
+    minValue: 0
+    maxValue: 550
+    baseValue: 550
+    bonusPerLevel: 0
+    vitalityActions: []
+  lootTables:
+  - lootTableID: 4
+    lootTableREF: {fileID: 11400000, guid: 8e587d7b92e4972449e5bbe8851d318c, type: 2}
+    dropRate: 100
+  isCombatEnabled: 1
+  isMovementEnabled: 1
+  isCollisionEnabled: 0
+  isTargetable: 1
+  isNameplateEnabled: 1
+  isPlayerInteractable: 1
+  NPCVisual: {fileID: 1623817811568398, guid: 3e4cf0221a0e8db41bcb50be99ebe457, type: 3}
+  modelPosition: {x: 0, y: 0, z: 0}
+  modelScale: {x: 1, y: 1, z: 1}
+  nameplateYOffset: 2.25
+  animatorController: {fileID: 22100000, guid: 12ba5945ff0cb514e8a8f8e47ce79652, type: 2}
+  animatorAvatar: {fileID: 9000000, guid: 9ad76de1617627d45ba4fa8ddf255af4, type: 3}
+  animatorUseRootMotion: 0
+  animatorUpdateMode: 0
+  AnimatorCullingMode: 0
+  navmeshAgentRadius: 0.5
+  navmeshAgentHeight: 2
+  navmeshAgentAngularSpeed: 400
+  navmeshObstacleAvoidance: 0
+  colliderType: 0
+  colliderCenter: {x: 0, y: 1, z: 0}
+  colliderSize: {x: 0, y: 0, z: 0}
+  colliderRadius: 1
+  colliderHeight: 2
+  aggroLinks: []

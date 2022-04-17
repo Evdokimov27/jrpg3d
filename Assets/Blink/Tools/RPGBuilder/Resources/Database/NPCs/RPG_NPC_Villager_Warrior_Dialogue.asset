@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eaea086ce51ea9419be768c6237eedb, type: 3}
   m_Name: RPG_NPC_Villager_Warrior_Dialogue
   m_EditorClassIdentifier: 
-  npcType: 6
+  npcType: 0
+  pattern: {fileID: 11400000, guid: 8e26e18fcc4310148902fb0033eedfb4, type: 2}
   ID: 7
   _name: Villager_Warrior_Dialogue
   _fileName: RPG_NPC_Villager_Warrior_Dialogue

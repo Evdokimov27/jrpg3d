@@ -355,9 +355,11 @@ MonoBehaviour:
   gender: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
+  rune: []
   currentGameSceneID: -1
   mainMenuStatAllocationPoints: 0
   mainMenuStatAllocationMaxPoints: 0
+  searchRunes: []
   allocatedStatsData: []
   actionKeys: []
   classDATA:
@@ -1940,6 +1942,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5200189919348090412, guid: 8f0f164b1c9c4684c84d60526c76f78d, type: 3}
+      propertyPath: characterData
+      value: 
+      objectReference: {fileID: 1380971231718293129}
     - target: {fileID: 5255614672325671657, guid: 8f0f164b1c9c4684c84d60526c76f78d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2096,6 +2102,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -28.965
       objectReference: {fileID: 0}
+    - target: {fileID: 5869393555069190759, guid: 8f0f164b1c9c4684c84d60526c76f78d, type: 3}
+      propertyPath: characterData
+      value: 
+      objectReference: {fileID: 1380971231718293129}
     - target: {fileID: 5894332378116991112, guid: 8f0f164b1c9c4684c84d60526c76f78d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

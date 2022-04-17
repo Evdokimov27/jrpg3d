@@ -17,6 +17,7 @@ public class RPGNpc : ScriptableObject
 
     public enum NPC_TYPE
     {
+        RUNE,
         MOB,
         RARE,
         BOSS,
@@ -28,6 +29,7 @@ public class RPGNpc : ScriptableObject
 
     public NPC_TYPE npcType;
 
+    public GestureRecognizer.GesturePattern pattern;
     public int ID = -1;
     public string _name;
     public string _fileName;
@@ -35,6 +37,7 @@ public class RPGNpc : ScriptableObject
     public Sprite icon;
 
     public bool isDummyTarget;
+
 
     public RPGFaction factionREF;
     [FactionID] public int factionID = -1;
@@ -113,6 +116,11 @@ public class RPGNpc : ScriptableObject
         public RPGLootTable lootTableREF;
         public float dropRate = 100f;
     }
+    [Serializable]
+    public class Rune
+    {
+        [RuneID] public int runeID = -1;
+    }
 
     [RPGDataList] public List<LOOT_TABLES> lootTables = new List<LOOT_TABLES>();
 
@@ -144,7 +152,7 @@ public class RPGNpc : ScriptableObject
     {
         Capsule,
         Sphere,
-        Box
+        Box,
     }
 
     public NPCColliderType colliderType;

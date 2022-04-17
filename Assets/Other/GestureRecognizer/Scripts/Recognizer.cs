@@ -5,6 +5,8 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 using System.Threading;
+using AbilityCast;
+using BayatGames.SaveGameFree;
 
 namespace GestureRecognizer
 {
@@ -81,13 +83,20 @@ namespace GestureRecognizer
     /// </summary>
     public class Recognizer : MonoBehaviour
     {
-
+        public CharacterData characterData;
         private const int Detail = 100;
 
         [Range(1, 4)]
         public int numberOfThreads = 1;
-
         public List<GesturePattern> patterns;
+        public AbilityCast.AbilityCast abilityCast;
+       
+        
+        public void Update()
+        {
+            patterns = abilityCast.isSearch;
+        }
+
 
         public RecognitionResult Recognize(GestureData data, bool normalizeScale = true)
         {
@@ -627,8 +636,7 @@ namespace GestureRecognizer
             }
 
             return result;
-        }
-
+        }   
     }
 
 

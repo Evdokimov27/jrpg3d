@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using BLINK.RPGBuilder.LogicMono;
 using BLINK.RPGBuilder.Managers;
+using GestureRecognizer;
 using UnityEngine;
 
 public class CharacterData : MonoBehaviour
@@ -13,11 +14,19 @@ public class CharacterData : MonoBehaviour
     public RPGRace.RACE_GENDER gender;
     public Vector3 position;
     public Vector3 rotation;
+    public List <GesturePattern> rune;
     public int currentGameSceneID = -1;
 
     public int mainMenuStatAllocationPoints = 0;
     public int mainMenuStatAllocationMaxPoints = 0;
-    
+
+    [System.Serializable]
+    public class searchRune
+    {
+        public GesturePattern rune;
+    }
+    public List<searchRune> searchRunes;
+
     [System.Serializable]
     public class AllocatedStatEntry
     {
@@ -418,11 +427,14 @@ public class CharacterData : MonoBehaviour
     }
     public List<DialoguesData> dialoguesDATA;
 
+
     private void Start()
     {
         if (instance != null) return;
         instance = this;
-        
+
+
+       
         currentActionAbilities = new List<ActionAbility>();
         allRandomizedItems = new List<RandomizedItems>();
         actionKeys = new List<ActionKeyDATA>();

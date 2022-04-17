@@ -19,6 +19,7 @@ MonoBehaviour:
   displayName: Irval The Wyvern
   icon: {fileID: 21300000, guid: 07cce1700135e0e4595058ee89dfca20, type: 3}
   isDummyTarget: 0
+  TEST: 0
   factionREF: {fileID: 11400000, guid: a6ae3711047668349b9fce1df5c1dfb9, type: 2}
   factionID: 1
   speciesID: -1
@@ -104,8 +105,7 @@ MonoBehaviour:
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
-  NPCVisual: {fileID: 1811008905277611703, guid: 8c6911529bc1df347a9949554c445fc1,
-    type: 3}
+  NPCVisual: {fileID: 1811008905277611703, guid: 8c6911529bc1df347a9949554c445fc1, type: 3}
   modelPosition: {x: 0, y: 0, z: 0}
   modelScale: {x: 1, y: 1, z: 1}
   nameplateYOffset: 3
@@ -117,6 +117,7 @@ MonoBehaviour:
   navmeshAgentRadius: 1.25
   navmeshAgentHeight: 2
   navmeshAgentAngularSpeed: 2000
+  navmeshObstacleAvoidance: 0
   colliderType: 0
   colliderCenter: {x: 0, y: 1.5, z: 0}
   colliderSize: {x: 0, y: 0, z: 0}

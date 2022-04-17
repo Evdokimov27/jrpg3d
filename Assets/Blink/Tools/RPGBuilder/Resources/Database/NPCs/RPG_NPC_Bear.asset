@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RPG_NPC_Bear
   m_EditorClassIdentifier: 
   npcType: 0
+  pattern: {fileID: 0}
   ID: 5
   _name: Bear
   _fileName: RPG_NPC_Bear

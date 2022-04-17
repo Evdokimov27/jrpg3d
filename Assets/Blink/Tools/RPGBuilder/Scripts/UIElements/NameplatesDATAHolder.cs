@@ -240,6 +240,10 @@ namespace BLINK.RPGBuilder.UIElements
             if (thisNode == CombatManager.playerCombatNode) return;
             switch (thisNode.npcDATA.npcType)
             {
+                case RPGNpc.NPC_TYPE.RUNE:
+                    InteractionIcon.enabled = true;
+                    InteractionIcon.sprite = merchantIcon;
+                    break;
                 case RPGNpc.NPC_TYPE.BOSS:
                     InteractionIcon.enabled = true;
                     InteractionIcon.sprite = bossIcon;

@@ -23,7 +23,7 @@ MonoBehaviour:
   armorType: LEATHER
   slotType: 
   rarity: Uncommon
-  itemModelName: Iron_Chest
+  itemModelName: Chestplate_2
   weaponModel: {fileID: 0}
   modelMaterial: {fileID: 2100000, guid: 644554a0aed30c94983917c3e51194f6, type: 2}
   armorMesh: {fileID: 4300014, guid: 79812551b3b29264e84b1b81593f6f03, type: 3}

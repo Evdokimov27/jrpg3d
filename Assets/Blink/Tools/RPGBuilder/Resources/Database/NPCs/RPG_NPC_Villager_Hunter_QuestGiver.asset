@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eaea086ce51ea9419be768c6237eedb, type: 3}
   m_Name: RPG_NPC_Villager_Hunter_QuestGiver
   m_EditorClassIdentifier: 
-  npcType: 5
+  npcType: 0
+  pattern: {fileID: 11400000, guid: 2c342c06460c6264caf23d9df81f5c15, type: 2}
   ID: 11
   _name: Villager_Hunter_QuestGiver
   _fileName: RPG_NPC_Villager_Hunter_QuestGiver
@@ -79,8 +80,7 @@ MonoBehaviour:
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
-  NPCVisual: {fileID: 4673939819346749004, guid: c634c1593353fc241a9834cc5b94c3eb,
-    type: 3}
+  NPCVisual: {fileID: 4673939819346749004, guid: c634c1593353fc241a9834cc5b94c3eb, type: 3}
   modelPosition: {x: 0, y: 0, z: 0}
   modelScale: {x: 1, y: 1, z: 1}
   nameplateYOffset: 2.25

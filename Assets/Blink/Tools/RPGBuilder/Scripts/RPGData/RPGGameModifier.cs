@@ -25,7 +25,7 @@ public class RPGGameModifier : ScriptableObject
         Combat,
         General,
         World,
-        Settings
+        Settings,
     }
 
     public enum CombatModuleType
@@ -233,6 +233,11 @@ public class RPGGameModifier : ScriptableObject
         Currency,
     }
 
+    public enum Rune
+    {
+        Pattern
+    }
+
     public enum CurrencyModifierType
     {
         Min,
@@ -346,7 +351,9 @@ public class RPGGameModifier : ScriptableObject
         
         // ITEMS
         public ItemModifierType itemModifierType;
-        
+
+        public Rune rune;
+
         // SKILLS
         public SkillModifierType skillModifierType;
         

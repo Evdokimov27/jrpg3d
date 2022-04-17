@@ -50,6 +50,7 @@ namespace BLINK.RPGBuilder.Managers
             }
         }
 
+
         public void Show(CombatNode cbtNode)
         {
             currentMerchantNode = cbtNode;

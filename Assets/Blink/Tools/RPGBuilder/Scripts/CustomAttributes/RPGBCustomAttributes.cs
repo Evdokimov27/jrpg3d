@@ -17,6 +17,7 @@ public class PointIDAttribute : IDAttribute {}
 public class SpellbookIDAttribute : IDAttribute {}
 public class FactionIDAttribute : IDAttribute {}
 public class WeaponTemplateIDAttribute : IDAttribute {}
+public class RuneID : IDAttribute { }
 public class SpeciesIDAttribute : IDAttribute {}
 public class ComboIDAttribute : IDAttribute {}
 public class ItemIDAttribute : IDAttribute {}

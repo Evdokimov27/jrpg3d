@@ -12,6 +12,7 @@ using BLINK.RPGBuilder.Utility;
 using BLINK.RPGBuilder.World;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using AbilityCast;
 
 namespace BLINK.RPGBuilder.LogicMono
 {
@@ -1484,6 +1485,7 @@ namespace BLINK.RPGBuilder.LogicMono
             if (Vector3.Distance(transform.position, CombatManager.playerCombatNode.transform.position) < 3)
                 switch (npcDATA.npcType)
                 {
+
                     case RPGNpc.NPC_TYPE.MERCHANT:
                     {
                         if (MerchantPanelDisplayManager.Instance.thisCG.alpha == 0)
@@ -1773,7 +1775,8 @@ namespace BLINK.RPGBuilder.LogicMono
 
         private bool HasInteractions()
         {
-            return npcDATA != null && (npcDATA.npcType == RPGNpc.NPC_TYPE.BANK ||
+            return npcDATA != null && (npcDATA.npcType == RPGNpc.NPC_TYPE.RUNE ||
+                                       npcDATA.npcType == RPGNpc.NPC_TYPE.BANK ||
                                        npcDATA.npcType == RPGNpc.NPC_TYPE.DIALOGUE ||
                                        npcDATA.npcType == RPGNpc.NPC_TYPE.MERCHANT ||
                                        npcDATA.npcType == RPGNpc.NPC_TYPE.QUEST_GIVER);
