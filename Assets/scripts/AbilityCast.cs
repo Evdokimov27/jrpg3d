@@ -96,7 +96,37 @@ public class AbilityCast : MonoBehaviour
         isSearch = SaveGame.Load<List<GesturePattern>>(characterData.CharacterName + "isSearch");
 
 
+        if (TimeAdd > 0)
+        {
+            TimeAdd -= Time.deltaTime;
+            if (TimeAdd <= 0)
+            {
 
+                for (int i = 0; i < AbilityCasts.Length; i++)
+                {
+                    for (int j = 0; j < AbilityCasts[i].need_rune.Length; j++)
+                    {
+                        if (GetComponent<ExampleGestureHandler>().ID_Draw == AbilityCasts[i].need_element.id)
+                        {
+                            element = AbilityCasts[i].need_element;
+                            IconElement.GetComponent<GesturePatternDraw>().pattern = element;
+                        }
+                        if (GetComponent<ExampleGestureHandler>().ID_Draw == AbilityCasts[i].need_rune[j].id)
+                        {
+                            rune.Add(AbilityCasts[i].need_rune[j]);
+                            Runs[0] = AbilityCasts[i].need_rune[j];
+                            IconCombo[rune.Count - 1].GetComponent<GesturePatternDraw>().pattern = Runs[0];
+                            ResultText.text = null;
+                            GetComponent<ExampleGestureHandler>().ID_Draw = null;
+                        }
+
+
+
+
+                    }
+                }
+            }
+        }
 
 
 
@@ -143,37 +173,7 @@ public class AbilityCast : MonoBehaviour
                 TimeAdd = 5;
             }
 
-            if (TimeAdd > 0)
-            {
-                TimeAdd -= Time.deltaTime;
-                if (TimeAdd <= 0)
-                {
-
-                    for (int i = 0; i < AbilityCasts.Length; i++)
-                    {
-                        for (int j = 0; j < AbilityCasts[i].need_rune.Length; j++)
-                        {
-                            if (GetComponent<ExampleGestureHandler>().ID_Draw == AbilityCasts[i].need_element.id)
-                            {
-                                element = AbilityCasts[i].need_element;
-                                IconElement.GetComponent<GesturePatternDraw>().pattern = element;
-                            }
-                            if (GetComponent<ExampleGestureHandler>().ID_Draw == AbilityCasts[i].need_rune[j].id)
-                            {
-                                rune.Add(AbilityCasts[i].need_rune[j]);
-                                Runs[0] = AbilityCasts[i].need_rune[j];
-                                IconCombo[rune.Count - 1].GetComponent<GesturePatternDraw>().pattern = Runs[0];
-                                ResultText.text = null;
-                                GetComponent<ExampleGestureHandler>().ID_Draw = null;
-                            }
-
-
-
-
-                        }
-                    }
-                }
-            }
+           
         }
         if (Input.GetKeyDown(UseAbilityKey))
         {
