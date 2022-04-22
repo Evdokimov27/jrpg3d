@@ -5,7 +5,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Blink_EditorSceneLoader : EditorWindow
+public class SceneLoader : EditorWindow
 {
     private RPGBuilderEditorDATA editorDATA;
     
@@ -13,7 +13,7 @@ public class Blink_EditorSceneLoader : EditorWindow
     private static void Init()
     {
         // Get existing open window or if none, make a new one:
-        var window = (Blink_EditorSceneLoader) GetWindow(typeof(Blink_EditorSceneLoader));
+        var window = (SceneLoader) GetWindow(typeof(SceneLoader));
         window.Show();
     }
 
