@@ -15,7 +15,6 @@ using System;
         public RPGBThirdPersonController controller;
         public float speed;
         public string mouseSpeed = "10";
-        public MouseProgram SpeedMouse;
         [SerializeField] public GameObject player;
         [SerializeField] public GameObject PAINTER;
         KeyCode SpellKey = RPGBuilderUtilities.GetCurrentKeyByActionKeyName("CAST_SPELL_BOOK");
@@ -30,12 +29,15 @@ using System;
             player = GameObject.FindWithTag("Player");
         }
 
-    public static AbilityCast Instance;
-    // Update is called once per frame
-    void Update()
+        public static AbilityCast Instance;
+        public static AbilityBook abilityBook;
+        // Update is called once per frame
+        void Update()
         {
             player = GameObject.FindWithTag("Player");
             PAINTER = GameObject.FindWithTag("PAINTER");
+        if (GameOptionsDisplayManager.Instance.showing == false)
+        {
             if (Input.GetKeyDown(SpellKey))
             {
                 PAINTER.GetComponent<Canvas>().enabled = !PAINTER.GetComponent<Canvas>().enabled;
@@ -45,8 +47,7 @@ using System;
                     Cursor.lockState = CursorLockMode.None;
                     speed = 0.2f;
                     mouseSpeed = "2";
-                    GetComponent<RPGBThirdPersonCharacterControllerEssentials>().SetCameraAiming(true);
-                    GetComponent<MouseProgram>().SpeedMouse("2");
+                    GetComponent<RPGBThirdPersonCharacterControllerEssentials>().SetCameraAiming(true);  
                 }
                 else
                 {
@@ -54,11 +55,16 @@ using System;
                     Cursor.lockState = CursorLockMode.Locked;
                     speed = 1;
                     mouseSpeed = "10";
-                GetComponent<RPGBThirdPersonCharacterControllerEssentials>().SetCameraAiming(false);
-                    GetComponent<MouseProgram>().SpeedMouse("10");
+                    GetComponent<RPGBThirdPersonCharacterControllerEssentials>().SetCameraAiming(false);
                 }
             }
         }
+        if (GameOptionsDisplayManager.Instance.showing == true)
+        {
+            PAINTER.GetComponent<Canvas>().enabled = false;
+            GetComponent<RPGBThirdPersonCharacterControllerEssentials>().SetCameraAiming(false);
+            speed = 1;
+            mouseSpeed = "10";
+        }
     }
-
-
+    }

@@ -2,13 +2,15 @@
 using BLINK.RPGBuilder.LogicMono;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using BLINK.Controller;
 
 namespace BLINK.RPGBuilder.Managers
 {
     public class GameOptionsDisplayManager : MonoBehaviour, IDisplayPanel
     {
         public CanvasGroup thisCG;
-        private bool showing;
+        public bool showing;
+        public RPGBThirdPersonCharacterControllerEssentials controller;
 
         private void Start()
         {
@@ -55,10 +57,19 @@ namespace BLINK.RPGBuilder.Managers
             if(CombatManager.playerCombatNode!=null) CombatManager.playerCombatNode.playerControllerEssentials.GameUIPanelAction(showing);
         }
 
+        void Update()
+        {
+            if (showing == true)
+                Time.timeScale = 0;
+            else
+            {
+                Time.timeScale = 1;
+            }
+        }
         public void Hide()
         {
             gameObject.transform.SetAsFirstSibling();
-
+           
             showing = false;
             RPGBuilderUtilities.DisableCG(thisCG);
             if(CustomInputManager.Instance != null) CustomInputManager.Instance.HandleUIPanelClose(thisCG);
