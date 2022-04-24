@@ -402,9 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64549476afcbce64ca06618b05afa18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSearch:
-  - {fileID: 11400000, guid: ed9dcbb0ce6c16f418944a4c56870221, type: 2}
-  - {fileID: 11400000, guid: 80c454440daf45b4d972cc5ed6f00d4d, type: 2}
+  isSearch: []
   selectRune: {fileID: 0}
   amountRuns: 6
   TimeAdd: 0
@@ -450,6 +448,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  startRune: {fileID: 11400000, guid: ba0f1a129732bae45a5a426abf0c4f48, type: 2}
   ResultText: {fileID: 5588722519379484146}
   rune:
   - {fileID: 0}

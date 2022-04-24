@@ -27,6 +27,7 @@ public class AbilityCast : MonoBehaviour
     [SerializeField] public GameObject target;
     [SerializeField] public GameObject PAINTER;
     [SerializeField] public List<GameObject> PAINTER_Icon;
+    [SerializeField] public GesturePattern startRune;
 
     public Text ResultText;
     public List<GesturePattern> rune;
@@ -42,15 +43,14 @@ public class AbilityCast : MonoBehaviour
     private void Start()
     {
         IconElement.GetComponent<GesturePatternDraw>().pattern = null;
-        rune.Clear();
         target = GameObject.Find("Target_Nameplate");
         ResultText.text = null;
         GetComponent<ExampleGestureHandler>().ID_Draw = null;
+        SaveGame.Delete(null + "isSearch");
     }
 
-    public void SearchRune()
+    void FixedUpdate()
     {
-        
         for (int i = 0; i < isSearch.Count; i++)
         {
             for (int j = 0; j < PAINTER_Icon.Count; j++)
@@ -69,18 +69,19 @@ public class AbilityCast : MonoBehaviour
         {
             isSearch.Add(selectRune);
             selectRune = null;
-        }
-
-        SaveGame.Save<List<GesturePattern>>(characterData.CharacterName + "isSearch", isSearch);
+            SaveGame.Save<List<GesturePattern>>(characterData.CharacterName + "isSearch", isSearch);
+            isSearch = SaveGame.Load<List<GesturePattern>>(characterData.CharacterName + "isSearch");
+        }      
     }
-
+   
     void Update()
     {
-        SearchRune();
+
         if (selectRune != null)
         {
             Save();
         }
+        isSearch = SaveGame.Load<List<GesturePattern>>(characterData.CharacterName + "isSearch");
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -93,7 +94,6 @@ public class AbilityCast : MonoBehaviour
         {
             isSearch.Clear();
         }
-        isSearch = SaveGame.Load<List<GesturePattern>>(characterData.CharacterName + "isSearch");
 
 
         if (TimeAdd > 0)
