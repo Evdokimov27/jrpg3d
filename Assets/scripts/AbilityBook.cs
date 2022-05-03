@@ -18,10 +18,12 @@ using System;
         [SerializeField] public GameObject player;
         [SerializeField] public GameObject PAINTER;
         KeyCode SpellKey = RPGBuilderUtilities.GetCurrentKeyByActionKeyName("CAST_SPELL_BOOK");
-        // Start is called before the first frame update
-        void Start()
+    // Start is called before the first frame update
+
+    void Start()
         {
-            speed = 1;
+        
+        speed = 1;
             if (PAINTER = GameObject.FindWithTag("PAINTER"))
             {
                 PAINTER.GetComponent<Canvas>().enabled = false;
@@ -29,12 +31,15 @@ using System;
             player = GameObject.FindWithTag("Player");
         }
 
-        public static AbilityCast Instance;
+        
+    
         public static AbilityBook abilityBook;
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+     
+    void Update()
         {
-            player = GameObject.FindWithTag("Player");
+        
+        player = GameObject.FindWithTag("Player");
             PAINTER = GameObject.FindWithTag("PAINTER");
         if (GameOptionsDisplayManager.Instance.showing == false)
         {
@@ -43,6 +48,7 @@ using System;
                 PAINTER.GetComponent<Canvas>().enabled = !PAINTER.GetComponent<Canvas>().enabled;
                 if (PAINTER.GetComponent<Canvas>().enabled == true)
                 {
+                    
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
                     speed = 0.2f;

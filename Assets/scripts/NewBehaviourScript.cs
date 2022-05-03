@@ -9,6 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     private GameObject player;
     public int SlotIndex;
     [SerializeField]RPGItem RequirementItem;
+    [SerializeField] int amount;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +27,12 @@ public class NewBehaviourScript : MonoBehaviour
 
         
 
-        if (Input.GetKeyDown(KeyCode.M) && (InventoryManager.Instance.isItemOwned(RequirementItem.ID, 2)))
+        if (Input.GetKeyDown(KeyCode.M) && (InventoryManager.Instance.isItemOwned(RequirementItem.ID, amount)))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             ErrorEventsDisplayManager.Instance.ShowErrorEvent("—цена изменена на " + SceneManager.GetActiveScene().name, 3);
             CharacterData.Instance.position = new Vector3(0, 0, 0);
-            InventoryManager.Instance.RemoveItem(RequirementItem.ID, 2, 0, SlotIndex, true);
+            InventoryManager.Instance.RemoveItem(RequirementItem.ID, amount, 0, SlotIndex, true);
            
         }
         else if (Input.GetKeyDown(KeyCode.M) && !InventoryManager.Instance.isItemOwned(RequirementItem.ID, 2))

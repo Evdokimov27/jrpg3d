@@ -15,8 +15,6 @@ namespace GestureRecognizer {
 	public class DrawDetector : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler {
 		
 		public Recognizer recognizer;
-		public Transform sphere;
-		public Vector2 sphere_pos;
 		public UILineRenderer line;
 		private List<UILineRenderer> lines;
 
@@ -53,8 +51,6 @@ namespace GestureRecognizer {
 			lines = new List<UILineRenderer> (){ line };
 			rectTransform = transform as RectTransform;
 			UpdateLines ();
-			sphere_pos = new Vector2 (sphere.transform.position.x, sphere.transform.position.y);
-			RealToLine(sphere_pos);
 		}
 
 

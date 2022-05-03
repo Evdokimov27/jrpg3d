@@ -12,8 +12,10 @@ using System.Linq;
 using UnityEngine.UI;
 
 
+
 public class AbilityCast : MonoBehaviour
 {
+    public static AbilityCast Instance;
     CombatNode caster;
     [Header("-----Изучение рун-----")]
     [SerializeField] public List<GesturePattern> isSearch;
@@ -38,6 +40,7 @@ public class AbilityCast : MonoBehaviour
     public CharacterData characterData;
     [Header("-----Управление-----")]
     public KeyCode UseAbilityKey;
+    public KeyCode SpellKey = RPGBuilderUtilities.GetCurrentKeyByActionKeyName("CAST_SPELL_BOOK");
 
 
     private void Start()
@@ -46,63 +49,28 @@ public class AbilityCast : MonoBehaviour
         target = GameObject.Find("Target_Nameplate");
         ResultText.text = null;
         GetComponent<ExampleGestureHandler>().ID_Draw = null;
-        SaveGame.Delete(null + "isSearch");
     }
 
-    void FixedUpdate()
+    public void Load()
     {
-        for (int i = 0; i < isSearch.Count; i++)
-        {
-            for (int j = 0; j < PAINTER_Icon.Count; j++)
-            {
-                if (isSearch[i].id == PAINTER_Icon[j].GetComponent<GesturePatternDraw>().pattern.id)
-                {
-                    PAINTER_Icon[j].SetActive(true);
-                }
-            }
-        }
+        isSearch = SaveGame.Load<List<GesturePattern>>(characterData.CharacterName + "isSearch");
+        Debug.Log(isSearch.Count); 
     }
 
-    public void Save()
-    {
-        if (selectRune != null)
-        {
-            isSearch.Add(selectRune);
-            selectRune = null;
-            SaveGame.Save<List<GesturePattern>>(characterData.CharacterName + "isSearch", isSearch);
-            isSearch = SaveGame.Load<List<GesturePattern>>(characterData.CharacterName + "isSearch");
-        }      
-    }
-   
     void Update()
     {
-
-        if (selectRune != null)
+        if (Input.GetKeyDown(SpellKey))
         {
-            Save();
+            Load();
         }
-        isSearch = SaveGame.Load<List<GesturePattern>>(characterData.CharacterName + "isSearch");
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            isSearch.Clear();
-            SaveGame.Save<List<GesturePattern>>(characterData.CharacterName + "isSearch", isSearch);
-        }
-
-
-        if (characterData.CharacterName == null)
-        {
-            isSearch.Clear();
-        }
-
-
+            
         if (TimeAdd > 0)
         {
             TimeAdd -= Time.deltaTime;
             if (TimeAdd <= 0)
             {
 
-                for (int i = 0; i < AbilityCasts.Length; i++)
+                for (int i = 0; i < AbilityCasts.Length ; i++)
                 {
                     for (int j = 0; j < AbilityCasts[i].need_rune.Length; j++)
                     {
@@ -194,8 +162,7 @@ public class AbilityCast : MonoBehaviour
             }
         }
 
-
-        for (int cd_id = 0; cd_id < AbilityCasts.Length + 1; cd_id++)
+        for (int cd_id = 0; cd_id < AbilityCasts.Length; cd_id++)
         {
             if (AbilityCasts[cd_id].cooldown_now > 0)
             {

@@ -450,8 +450,7 @@ MonoBehaviour:
   - {fileID: 0}
   startRune: {fileID: 11400000, guid: ba0f1a129732bae45a5a426abf0c4f48, type: 2}
   ResultText: {fileID: 5588722519379484146}
-  rune:
-  - {fileID: 0}
+  rune: []
   element: {fileID: 0}
   IconCombo:
   - {fileID: 0}
@@ -462,11 +461,6 @@ MonoBehaviour:
   - {fileID: 0}
   IconElement: {fileID: 0}
   Runs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   characterData: {fileID: 0}
   UseAbilityKey: 0

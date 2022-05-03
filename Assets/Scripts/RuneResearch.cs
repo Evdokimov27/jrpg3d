@@ -19,14 +19,20 @@ public class RuneResearch : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        ACast.GetComponent<AbilityCast>().selectRune = Rune;
+        Debug.Log(ACast.GetComponent<AbilityCast>().characterData.CharacterName + "isSearch");
+        ACast.GetComponent<AbilityCast>().isSearch.Add(Rune);
+        SaveGame.Save<List<GesturePattern>>(ACast.GetComponent<AbilityCast>().characterData.CharacterName + "isSearch", ACast.GetComponent<AbilityCast>().isSearch);
+        ACast.GetComponent<AbilityCast>().isSearch = SaveGame.Load<List<GesturePattern>>(ACast.GetComponent<AbilityCast>().characterData.CharacterName + "isSearch");
+
         Rune = null;
     }
 
     private void Update()
     {
+
         ACast = GameObject.FindWithTag("AbilityCast");
-        
+       
+
         if (Rune == null)
         {
             for (int i = 0; i < Lighting.Length; i++)

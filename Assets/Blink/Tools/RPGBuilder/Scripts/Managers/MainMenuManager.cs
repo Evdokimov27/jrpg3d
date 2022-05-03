@@ -9,6 +9,8 @@ using BLINK.RPGBuilder.UIElements;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using BayatGames.SaveGameFree;
+using GestureRecognizer;
 
 namespace BLINK.RPGBuilder.Managers
 {
@@ -1548,6 +1550,8 @@ namespace BLINK.RPGBuilder.Managers
                         RPGBuilderUtilities.GetItemFromID(CharacterData.Instance.weaponsEquipped[i].itemID),
                         appearanceref, i, CharacterData.Instance.weaponsEquipped[i].itemDataID);
         }
+
+
 
         private int getRaceIDByName(string raceName)
         {
