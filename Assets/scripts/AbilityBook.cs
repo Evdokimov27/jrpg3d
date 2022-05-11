@@ -52,7 +52,7 @@ using System;
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
                     speed = 0.2f;
-                    mouseSpeed = "2";
+                    mouseSpeed = "10";
                     GetComponent<RPGBThirdPersonCharacterControllerEssentials>().SetCameraAiming(true);  
                 }
                 else
